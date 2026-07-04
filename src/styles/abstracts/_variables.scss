@@ -25,9 +25,37 @@ $color-text-inverse: $white-pure;
 
 $gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
 
+$blue-dark: #002f52;
+$blue-light: #326589;
+$orange-main: #eb9b00;
+$white-pure: #ffffff;
+$black-pure: #000000;
+$grey-light: #f9f9f9;
+$grey-bg-alt: #ebecee;
+$grey-medium: #858585;
+$grey-dark: #474646;
+
+
+$color-primary: $blue-dark;
+$color-secondary: $orange-main;
+
+$color-bg-main: $white-pure;
+$color-bg-alt: $grey-bg-alt; 
+$color-bg-muted: $grey-light;
+
+$color-text-main: $black-pure;
+$color-text-muted: $grey-medium;
+$color-text-dark: $grey-dark;
+$color-text-inverse: $white-pure;
+
+
+$gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
+
+
 $font-primary: 'Poppins', sans-serif;
 $font-logo: 'Josefin Sans', sans-serif;
 
+/// Font weights extracted from Figma.
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
