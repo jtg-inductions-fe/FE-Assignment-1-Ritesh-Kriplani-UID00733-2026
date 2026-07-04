@@ -1,0 +1,15 @@
+$color-blue-dark: #002f52;
+$color-blue-light: #326589;
+$color-orange: #eb9b00;
+$color-white: #ffffff;
+$color-black: #000000;
+
+$gradient-primary: linear-gradient(
+    90deg,
+    $color-blue-dark 0%,
+    $color-blue-light 100%
+);
+
+$font-primary: 'Poppins', sans-serif;
+
+$shadow-dropdown: 0px 8px 64px 8px rgba(0, 0, 0, 0.25);
