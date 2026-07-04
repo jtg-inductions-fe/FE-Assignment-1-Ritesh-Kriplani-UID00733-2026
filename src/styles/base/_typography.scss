@@ -1,19 +1,31 @@
+// src/styles/base/_typography.scss
+
+// ==========================================================================
+// BASE TYPOGRAPHY
+// Global typography rules mapped to the design system's semantic tokens.
+// ==========================================================================
+
+/// 1. Set the root font size.
+/// Keeps accessibility intact by utilizing the browser's default base (usually 16px).
 html {
     font-size: 100%;
 }
 
+/// 2. Set the global body typography.
+/// Utilizes the primary font family and semantic color tokens.
 body {
     font-family: $font-primary;
-    color: $color-black;
-    background-color: $color-white;
-    font-weight: 400;
+    color: $color-text-main;
+    background-color: $color-bg-main;
+    font-weight: $font-weight-regular;
 }
 
+/// 3. Standardize heading weights based on Figma data.
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    font-weight: $font-weight-bold;
 }

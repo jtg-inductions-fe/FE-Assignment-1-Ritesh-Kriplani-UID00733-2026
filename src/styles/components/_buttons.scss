@@ -1,5 +1,11 @@
-.btn--primary {
-    @include button-primary;
+// src/styles/components/_buttons.scss
 
-    border: 1px solid $color-orange;
+// BEM Block: .btn
+// BEM Modifier: .btn--primary
+.btn--primary {
+    // 1. Standard CSS properties go FIRST
+    border: 1px solid $color-secondary;
+
+    // 2. Mixins (which contain nested pseudo-classes) go LAST
+    @include button-primary;
 }

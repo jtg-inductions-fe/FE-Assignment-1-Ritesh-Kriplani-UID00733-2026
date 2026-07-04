@@ -1,15 +1,83 @@
-$color-blue-dark: #002f52;
-$color-blue-light: #326589;
-$color-orange: #eb9b00;
-$color-white: #ffffff;
-$color-black: #000000;
+// src/styles/abstracts/_variables.scss
 
-$gradient-primary: linear-gradient(
-    90deg,
-    $color-blue-dark 0%,
-    $color-blue-light 100%
-);
+// ==========================================================================
+// 1. BASE COLOR PALETTE
+// ==========================================================================
 
+/// Base literal colors extracted from Figma.
+/// @access private (Do NOT use directly in CSS rules)
+$blue-dark: #002f52;
+$blue-light: #326589;
+$orange-main: #eb9b00;
+$white-pure: #ffffff;
+$black-pure: #000000;
+$grey-light: #f9f9f9;
+$grey-bg-alt: #ebecee;
+$grey-medium: #858585;
+$grey-dark: #474646;
+
+// ==========================================================================
+// 2. SEMANTIC COLOR TOKENS
+// ==========================================================================
+
+/// Functional color tokens mapped to the base palette.
+/// @access public (USE THESE in your components)
+$color-primary: $blue-dark;
+$color-secondary: $orange-main;
+
+$color-bg-main: $white-pure;
+$color-bg-alt: $grey-bg-alt; // Mapped to the specific section background
+$color-bg-muted: $grey-light;
+
+$color-text-main: $black-pure;
+$color-text-muted: $grey-medium;
+$color-text-dark: $grey-dark;
+$color-text-inverse: $white-pure;
+
+// ==========================================================================
+// 3. GRADIENTS
+// ==========================================================================
+
+/// Primary linear gradient used for Hero banners and dark headers.
+/// @type Color
+$gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
+
+// ==========================================================================
+// 4. TYPOGRAPHY
+// ==========================================================================
+
+/// Global font families.
 $font-primary: 'Poppins', sans-serif;
+$font-logo: 'Josefin Sans', sans-serif;
 
+/// Font weights extracted from Figma.
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+/// Standardized T-shirt sizing for font sizes.
+$font-size-xs: 14px;
+$font-size-sm: 16px;
+$font-size-md: 18px;
+$font-size-lg: 24px;
+$font-size-xl: 26px;
+$font-size-xxl: 30px;
+$font-size-3xl: 32px;
+$font-size-4xl: 36px;
+
+/// Typography spacing rules.
+$line-height-tight: 100%;
+$letter-spacing-none: 0%;
+
+// ==========================================================================
+// 5. SHADOWS
+// ==========================================================================
+
+/// Large, dispersed shadow for primary dropdown menus.
+/// @type List
 $shadow-dropdown: 0px 8px 64px 8px rgba(0, 0, 0, 0.25);
+
+/// Tighter, subtle shadow for individual book cards and smaller elements.
+/// @type List
+$shadow-card: 2px 4px 8px 0px rgba(0, 0, 0, 0.15);
