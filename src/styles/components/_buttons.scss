@@ -4,7 +4,7 @@
 // BEM Modifier: .btn--primary
 .btn--primary {
     // 1. Standard CSS properties go FIRST
-    border: 1px solid $color-secondary;
+    border: 1px solid $color-primary;
 
     // 2. Mixins (which contain nested pseudo-classes) go LAST
     @include button-primary;

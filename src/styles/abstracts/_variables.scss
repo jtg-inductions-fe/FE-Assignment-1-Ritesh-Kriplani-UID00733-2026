@@ -1,5 +1,8 @@
 // src/styles/abstracts/_variables.scss
 
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1728px;
+
 // ==========================================================================
 // 1. BASE COLOR PALETTE
 // ==========================================================================
@@ -24,11 +27,9 @@ $grey-dark: #474646;
 /// @access public (USE THESE in your components)
 $color-primary: $blue-dark;
 $color-secondary: $orange-main;
-
 $color-bg-main: $white-pure;
-$color-bg-alt: $grey-bg-alt; // Mapped to the specific section background
+$color-bg-alt: $grey-bg-alt;
 $color-bg-muted: $grey-light;
-
 $color-text-main: $black-pure;
 $color-text-muted: $grey-medium;
 $color-text-dark: $grey-dark;
