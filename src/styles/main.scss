@@ -1,26 +1,6 @@
 /* src/styles/main.scss */
 
-// 1. Abstracts
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-
-// 2. Base
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/utilities';
-
-// 3. Vendors
-// @import 'vendors/swiper';
-
-// 4. Layout
-@import 'layout/header';
-@import 'layout/footer';
-
-// 5. Components
-@import 'components/buttons';
-@import 'components/search-bar';
-@import 'components/book-card';
-
-// 6. Pages
-
-// 7. Themes
+@use 'abstracts';
+@use 'base';
+@use 'layout';
+@use 'components';
