@@ -1,1 +1,160 @@
 @use '../abstracts' as *;
+.header {
+    background-color: #ffffff;
+    position: relative;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 18px 24px;
+        box-sizing: border-box;
+    }
+
+    &__brand,
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__brand {
+        gap: 24px;
+    }
+
+    &__actions {
+        gap: 8px;
+    }
+
+    &__menu-toggle {
+        @include flex-center;
+        padding: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        .header__icon {
+            width: 48px;
+            height: 48px;
+        }
+        &.is-active {
+            background-color: $color-primary;
+        }
+    }
+
+    &__icon {
+        display: block;
+
+        &--logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        &--favorites {
+            width: 34.88px;
+            height: 32px;
+        }
+
+        &--bag {
+            width: 38px;
+            height: 38px;
+        }
+
+        &--user {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__logo-link {
+        @include flex-center;
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+    }
+
+    &__action-link {
+        @include flex-center;
+        padding: 8px;
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+
+        // Compras (bag) link has asymmetric padding per Figma inspector — top 4px, others 8px
+        &--bag {
+            padding: 4px 8px 8px 8px;
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+
+        top: 80px;
+
+        left: 0;
+
+        width: 300px;
+
+        background-color: $color-bg-main;
+
+        box-shadow: $shadow-dropdown;
+
+        &[hidden] {
+            display: none;
+        }
+    }
+
+    &__dropdown-title {
+        padding: 24px 24px 8px 24px;
+
+        font-family: $font-primary;
+
+        font-weight: $font-weight-bold;
+
+        font-size: $font-size-sm;
+
+        color: $color-secondary;
+    }
+
+    &__dropdown-nav {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 24px;
+
+        padding: 8px 24px 24px 24px;
+    }
+
+    &__dropdown-link {
+        font-family: $font-primary;
+
+        font-weight: $font-weight-regular;
+
+        font-size: $font-size-sm;
+
+        text-transform: uppercase;
+
+        color: $color-primary;
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+
+            outline-offset: 2px;
+        }
+    }
+
+    &__menu-toggle {
+        &.is-active {
+            background-color: $color-primary;
+
+            .header__icon {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}
