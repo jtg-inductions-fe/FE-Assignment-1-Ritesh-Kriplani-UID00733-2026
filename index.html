@@ -1,18 +1,100 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AluraBooks</title>
+
+        <!-- Preconnect to Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap"
             rel="stylesheet"
         />
+
+        <link rel="stylesheet" href="./src/styles/main.scss" />
     </head>
+
     <body>
-        <h1>Testing the Reset</h1>
+        <header class="header">
+            <!-- Notice the double underscore __ here -->
+            <div class="header__container">
+                <div class="header__brand">
+                    <button
+                        class="header__menu-toggle"
+                        aria-label="Open navigation menu"
+                    >
+                        <img
+                            src="/assets/icons/menu.svg"
+                            alt="Hamburger menu icon"
+                            class="header__icon"
+                        />
+                    </button>
+                    <a href="/" class="header__logo-link">
+                        <img
+                            src="/assets/logos/logo.svg"
+                            alt="AluraBooks Logo"
+                            class="header__icon header__icon--logo"
+                        />
+                    </a>
+                </div>
+
+                <nav class="header__actions" aria-label="User utilities">
+                    <a href="/favorites" class="header__action-link">
+                        <img
+                            src="/assets/icons/favoritos.svg"
+                            alt="Favorites icon"
+                            class="header__icon header__icon--favorites"
+                        />
+                    </a>
+                    <a
+                        href="/bag"
+                        class="header__action-link header__action-link--bag"
+                    >
+                        <img
+                            src="/assets/icons/sacola.svg"
+                            alt="Shopping bag icon"
+                            class="header__icon header__icon--bag"
+                        />
+                    </a>
+                    <a href="/profile" class="header__action-link">
+                        <img
+                            src="/assets/icons/usuario.svg"
+                            alt="User profile icon"
+                            class="header__icon header__icon--user"
+                        />
+                    </a>
+                </nav>
+            </div>
+
+            <div class="header__dropdown" id="headerDropdown" hidden>
+                <p class="header__dropdown-title">Categories</p>
+                <nav class="header__dropdown-nav" aria-label="Book categories">
+                    <a
+                        href="/category/programming"
+                        class="header__dropdown-link"
+                        >Programming</a
+                    >
+                    <a href="/category/front-end" class="header__dropdown-link"
+                        >Front-End</a
+                    >
+                    <a
+                        href="/category/infrastructure"
+                        class="header__dropdown-link"
+                        >Infrastructure</a
+                    >
+                    <a href="/category/business" class="header__dropdown-link"
+                        >Business</a
+                    >
+                    <a href="/category/design-ux" class="header__dropdown-link"
+                        >Design &amp; UX</a
+                    >
+                </nav>
+            </div>
+        </header>
+        <!-- Main JS Entry Point -->
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
