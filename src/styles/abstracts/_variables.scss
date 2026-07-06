@@ -1,13 +1,12 @@
 // src/styles/abstracts/_variables.scss
 
-$breakpoint-tablet: 1024px;
-$breakpoint-desktop: 1728px;
+$breakpoint-tablet: 64rem;
+$breakpoint-desktop: 108rem;
 
 // ==========================================================================
 // 1. BASE COLOR PALETTE
 // ==========================================================================
 
-/// Base literal colors extracted from Figma.
 /// @access private (Do NOT use directly in CSS rules)
 $blue-dark: #002f52;
 $blue-light: #326589;
@@ -23,7 +22,6 @@ $grey-dark: #474646;
 // 2. SEMANTIC COLOR TOKENS
 // ==========================================================================
 
-/// Functional color tokens mapped to the base palette.
 /// @access public (USE THESE in your components)
 $color-primary: $blue-dark;
 $color-secondary: $orange-main;
@@ -39,7 +37,6 @@ $color-text-inverse: $white-pure;
 // 3. GRADIENTS
 // ==========================================================================
 
-/// Primary linear gradient used for Hero banners and dark headers.
 /// @type Color
 $gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
 
@@ -58,17 +55,17 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 /// Standardized T-shirt sizing for font sizes.
-$font-size-xs: 14px;
-$font-size-sm: 16px;
-$font-size-md: 18px;
-$font-size-lg: 24px;
-$font-size-xl: 26px;
-$font-size-xxl: 30px;
-$font-size-3xl: 32px;
-$font-size-4xl: 36px;
+$font-size-xs: 0.875rem; // 14px
+$font-size-sm: 1rem; // 16px
+$font-size-md: 1.125rem; // 18px
+$font-size-lg: 1.5rem; // 24px
+$font-size-xl: 1.625rem; // 26px
+$font-size-xxl: 1.875rem; // 30px
+$font-size-3xl: 2rem; // 32px
+$font-size-4xl: 2.25rem; // 36px
 
 /// Typography spacing rules.
-$line-height-tight: 100%;
+$line-height-tight: 1;
 $letter-spacing-none: 0%;
 
 // ==========================================================================

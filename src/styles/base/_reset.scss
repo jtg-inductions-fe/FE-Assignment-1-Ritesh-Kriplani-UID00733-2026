@@ -14,14 +14,34 @@
 }
 
 /// 2. Remove default margin and padding globally.
-* {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
     margin: 0;
+}
+
+ul,
+ol {
     padding: 0;
 }
 
 /// 3. Set core body defaults to optimize legibility.
-body {
+html {
     line-height: 1.5;
+}
+
+body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -50,20 +70,13 @@ ol {
     list-style: none;
 }
 
-/// 7. Remove default anchor styling to use custom system.
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/// 8. Reset button base styles for easier customization.
+/// 7. Reset button base styles for easier customization.
 button {
     background: none;
     border: none;
-    cursor: pointer;
 }
 
-/// 9. Avoid text overflows on headings and paragraphs.
+/// 8. Avoid text overflows on headings and paragraphs.
 p,
 h1,
 h2,

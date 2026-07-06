@@ -7,6 +7,23 @@
 .btn {
     &--primary {
         border: 1px solid $color-primary;
-        @include button-primary;
+        background-color: $color-secondary;
+        color: $color-text-inverse;
+        padding: 8px 16px;
+        font-family: $font-primary;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 4px;
+        }
     }
 }
