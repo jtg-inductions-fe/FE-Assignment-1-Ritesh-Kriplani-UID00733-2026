@@ -1,15 +1,33 @@
+// src/styles/components/_header.scss
+
 @use '../abstracts' as *;
+
+$header-height: 5rem;
+
 .header {
-    background-color: #ffffff;
+    background-color: $color-bg-main;
     position: relative;
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 80px;
-        padding: 18px 24px;
+        height: $header-height;
+        padding: 1.125rem 1.5rem;
         box-sizing: border-box;
+
+        @include respond-to('tablet') {
+            width: $breakpoint-tablet;
+            max-width: 100%;
+            margin: 0 auto;
+            height: auto;
+            padding: 1.125rem 5rem;
+        }
+
+        @include respond-to('desktop') {
+            width: $breakpoint-desktop;
+            justify-content: flex-start;
+        }
     }
 
     &__brand,
@@ -19,141 +37,323 @@
     }
 
     &__brand {
-        gap: 24px;
+        gap: 0.9375rem;
+
+        @include respond-to('tablet') {
+            gap: 0.6875rem;
+        }
     }
 
     &__actions {
-        gap: 8px;
+        gap: 0.5rem;
+
+        @include respond-to('tablet') {
+            gap: 1.5rem;
+        }
+
+        @include respond-to('desktop') {
+            gap: 3.8125rem;
+            margin-right: -0.6875rem;
+            margin-left: 3.4375rem;
+        }
     }
 
     &__menu-toggle {
-        @include flex-center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 0;
         background: transparent;
         border: none;
         cursor: pointer;
+        width: $header-height;
+        height: $header-height;
+        margin: -1.125rem 0 -1.125rem -1.5rem;
 
         .header__icon {
-            width: 48px;
-            height: 48px;
+            width: 3rem;
+            height: 3rem;
+            margin-left: 0.9375rem;
         }
+
         &.is-active {
-            background-color: $color-primary;
+            background: $gradient-primary;
+            .header__icon {
+                width: 2.25rem;
+                height: 1.5rem;
+            }
+        }
+
+        @include respond-to('tablet') {
+            display: none;
         }
     }
 
     &__icon {
         display: block;
+        flex-shrink: 0;
 
         &--logo {
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
+            min-width: 2.5rem;
+            margin-left: 0.0625rem;
+            margin-top: -0.0625rem;
+
+            @include respond-to('tablet') {
+                margin-top: -0.25rem;
+                margin-left: 0;
+            }
         }
 
         &--favorites {
-            width: 34.88px;
-            height: 32px;
+            width: 2.18rem;
+            height: 2rem;
+            min-width: 2.18rem;
         }
 
         &--bag {
-            width: 38px;
-            height: 38px;
+            width: 2.375rem;
+            height: 2.375rem;
+            min-width: 2.375rem;
+            margin-top: -0.3125rem;
+
+            @include respond-to('tablet') {
+                margin-right: 0.8125rem;
+            }
+            @include respond-to('desktop') {
+            }
         }
 
         &--user {
-            width: 32px;
-            height: 32px;
+            width: 2rem;
+            height: 2rem;
+            min-width: 2rem;
+
+            @include respond-to('tablet') {
+                margin-right: 0;
+            }
+
+            @include respond-to('desktop') {
+            }
+        }
+    }
+
+    &__wordmark {
+        display: none;
+
+        @include respond-to('tablet') {
+            display: inline-flex;
+            font-family: $font-logo;
+            font-size: $font-size-xxl;
+            line-height: $line-height-tight;
+            color: $color-text-main;
+            align-items: center;
+
+            &-alura {
+                font-weight: $font-weight-bold;
+                margin-top: 0.4375rem;
+            }
+
+            &-books {
+                font-weight: $font-weight-regular;
+                margin-top: 0.4375rem;
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @include respond-to('tablet') {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        @include respond-to('desktop') {
+            margin-right: auto;
+            margin-left: 3.4375rem; // 55px
+        }
+    }
+
+    &__nav-item {
+        @include respond-to('tablet') {
+            position: relative;
+        }
+    }
+
+    &__nav-link {
+        @include respond-to('tablet') {
+            display: inline-block;
+            font-family: $font-primary;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-sm;
+            line-height: $line-height-tight;
+            color: $color-text-main;
+            text-decoration: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.625rem;
+            white-space: nowrap;
+            text-transform: uppercase;
+
+            &:focus-visible {
+                outline: 0.125rem solid $color-primary; // 2px
+                outline-offset: 0.125rem; // 2px
+            }
+
+            &--categorias[aria-expanded='true'] {
+                color: $color-text-inverse;
+                background-color: $color-primary;
+                background-image: $gradient-primary;
+            }
         }
     }
 
     &__logo-link {
-        @include flex-center;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6875rem;
+        text-decoration: none;
         &:focus-visible {
-            outline: 2px solid $color-primary;
-            outline-offset: 2px;
+            outline: 0.125rem solid $color-primary; // 2px
+            outline-offset: 0.125rem; // 2px
         }
     }
 
     &__action-link {
-        @include flex-center;
-        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem; // 8px
+        text-decoration: none;
+        color: $color-text-main;
 
         &:focus-visible {
-            outline: 2px solid $color-primary;
-            outline-offset: 2px;
+            outline: 0.125rem solid $color-primary; // 2px
+            outline-offset: 0.125rem; // 2px
         }
 
-        // Compras (bag) link has asymmetric padding per Figma inspector — top 4px, others 8px
         &--bag {
-            padding: 4px 8px 8px 8px;
+            padding: 0.1875rem 0.5rem; // 3px 8px 3px 8px
+        }
+
+        &--favorites {
+            @include respond-to('tablet') {
+                display: none;
+            }
+        }
+
+        @include respond-to('desktop') {
+            gap: 1.125rem;
+        }
+
+        span {
+            display: none;
+
+            @include respond-to('desktop') {
+                display: inline-block;
+                font-family: $font-primary;
+                font-weight: $font-weight-regular;
+                font-size: 1.25rem;
+                color: $color-text-main;
+                line-height: $line-height-tight;
+                white-space: nowrap;
+            }
         }
     }
 
     &__dropdown {
         position: absolute;
-
-        top: 80px;
-
+        top: $header-height;
         left: 0;
-
-        width: 300px;
-
+        width: 18.75rem; // 300px
         background-color: $color-bg-main;
-
         box-shadow: $shadow-dropdown;
 
         &[hidden] {
             display: none;
         }
+        @include respond-to('tablet') {
+            display: none;
+        }
     }
 
     &__dropdown-title {
-        padding: 24px 24px 8px 24px;
-
+        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
         font-family: $font-primary;
-
         font-weight: $font-weight-bold;
-
         font-size: $font-size-sm;
-
         color: $color-secondary;
     }
 
     &__dropdown-nav {
         display: flex;
-
         flex-direction: column;
-
-        gap: 24px;
-
-        padding: 8px 24px 24px 24px;
+        gap: 2rem; // 32px
+        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     }
 
     &__dropdown-link {
         font-family: $font-primary;
-
         font-weight: $font-weight-regular;
-
         font-size: $font-size-sm;
-
         text-transform: uppercase;
-
+        text-decoration: none;
         color: $color-primary;
 
         &:focus-visible {
-            outline: 2px solid $color-primary;
-
-            outline-offset: 2px;
+            outline: 0.125rem solid $color-primary;
+            outline-offset: 0.125rem;
         }
     }
 
-    &__menu-toggle {
-        &.is-active {
-            background-color: $color-primary;
+    &__categories-dropdown {
+        @include respond-to('tablet') {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 11.3125rem;
+            background-color: $color-bg-main;
+            box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+            z-index: 10;
 
-            .header__icon {
-                filter: brightness(0) invert(1);
+            &[hidden] {
+                display: none;
+            }
+        }
+    }
+
+    &__categories-list {
+        @include respond-to('tablet') {
+            list-style: none;
+            margin: 0;
+            padding: 1rem 0;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__categories-link {
+        @include respond-to('tablet') {
+            display: block;
+            padding: 0.5rem 1.5rem;
+            font-family: $font-primary;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-sm;
+            line-height: $line-height-tight;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color-primary;
+
+            &:hover,
+            &:focus-visible {
+                background: $gradient-primary;
+                color: $color-text-inverse;
+                outline: none;
             }
         }
     }
