@@ -1,5 +1,5 @@
 import '../styles/main.scss';
-
+import { initDropdown } from './modules/navigation.js';
 /**
  * Toggles the mobile category dropdown menu when the hamburger icon is clicked.
  * Manages aria-expanded for accessibility and closes on outside click / Escape key.
@@ -8,7 +8,7 @@ const menuIcon = menuToggle.querySelector('.header__icon');
 const dropdown = document.getElementById('headerDropdown');
 
 const ICON_CLOSED = '/assets/icons/menu.svg';
-const ICON_OPEN = '/assets/icons/menu-aberto.svg';
+const ICON_OPEN = '/assets/icons/frame.svg';
 
 function closeDropdown() {
     dropdown.hidden = true;
@@ -42,4 +42,9 @@ document.addEventListener('keydown', (event) => {
         closeDropdown();
         menuToggle.focus();
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    initDropdown();
+    // Initialize other modules here as you build them
 });

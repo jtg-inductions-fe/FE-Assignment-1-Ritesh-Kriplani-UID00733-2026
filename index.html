@@ -19,7 +19,6 @@
 
     <body>
         <header class="header">
-            <!-- Notice the double underscore __ here -->
             <div class="header__container">
                 <div class="header__brand">
                     <button
@@ -38,17 +37,87 @@
                             alt="AluraBooks Logo"
                             class="header__icon header__icon--logo"
                         />
+                        <!-- Tablet+ only (hidden on mobile via CSS) -->
+                        <span class="header__wordmark">
+                            <span class="header__wordmark-alura">Alura</span
+                            ><span class="header__wordmark-books">Books</span>
+                        </span>
                     </a>
                 </div>
 
+                <!-- Tablet+ only (hidden on mobile via CSS) -->
+                <nav class="header__nav" aria-label="Primary navigation">
+                    <div class="header__nav-item">
+                        <button
+                            class="header__nav-link header__nav-link--categorias"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            Categorias
+                        </button>
+                        <div
+                            id="categories-dropdown"
+                            class="header__categories-dropdown"
+                            hidden
+                        >
+                            <ul class="header__categories-list">
+                                <li>
+                                    <a
+                                        href="/category/programming"
+                                        class="header__categories-link"
+                                        >Programming</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/category/front-end"
+                                        class="header__categories-link"
+                                        >Front-End</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/category/infrastructure"
+                                        class="header__categories-link"
+                                        >Infrastructure</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/category/business"
+                                        class="header__categories-link"
+                                        >Business</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/category/design-ux"
+                                        class="header__categories-link"
+                                        >Design &amp; UX</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="/favorites" class="header__nav-link">Favorites</a>
+                    <a href="/bookshelf" class="header__nav-link"
+                        >My Bookshelf</a
+                    >
+                </nav>
+
                 <nav class="header__actions" aria-label="User utilities">
-                    <a href="/favorites" class="header__action-link">
+                    <a
+                        href="/favorites"
+                        class="header__action-link header__action-link--favorites"
+                    >
                         <img
                             src="/assets/icons/favoritos.svg"
                             alt="Favorites icon"
                             class="header__icon header__icon--favorites"
                         />
                     </a>
+
+                    <!-- ADDED <span>My Bag</span> HERE -->
                     <a
                         href="/bag"
                         class="header__action-link header__action-link--bag"
@@ -58,13 +127,17 @@
                             alt="Shopping bag icon"
                             class="header__icon header__icon--bag"
                         />
+                        <span>My Bag</span>
                     </a>
+
+                    <!-- ADDED <span>My Profile</span> HERE -->
                     <a href="/profile" class="header__action-link">
                         <img
                             src="/assets/icons/usuario.svg"
                             alt="User profile icon"
                             class="header__icon header__icon--user"
                         />
+                        <span>My Profile</span>
                     </a>
                 </nav>
             </div>
@@ -94,7 +167,7 @@
                 </nav>
             </div>
         </header>
-        <!-- Main JS Entry Point -->
+        <!-- JS END POINT-->
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
