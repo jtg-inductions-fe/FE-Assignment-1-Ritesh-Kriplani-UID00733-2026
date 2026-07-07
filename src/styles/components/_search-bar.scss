@@ -1,1 +1,91 @@
 @use '../abstracts' as *;
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 380px;
+    padding: 10px 24px;
+    border: 1px solid $color-bg-main;
+    border-radius: $radius-pill;
+    background: transparent;
+
+    @include respond_to('tablet') {
+        max-width: 476px;
+        height: 56px;
+    }
+    @include respond_to('desktop') {
+        max-width: 586px;
+    }
+    &:focus-within {
+        outline: 2px solid $color-secondary;
+        outline-offset: 2px;
+    }
+
+    &__label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+    &__input {
+        width: 214px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: transparent;
+        font-family: $font-primary;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-xs;
+        line-height: $line-height-tight;
+        color: $color-text-inverse;
+
+        @include respond_to('tablet') {
+            width: 250px;
+
+            margin-right: -25px;
+
+            font-size: 16px;
+        }
+
+        &::placeholder {
+            color: $color-text-inverse;
+            opacity: 1;
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &::-webkit-search-cancel-button {
+            display: none;
+        }
+    }
+}

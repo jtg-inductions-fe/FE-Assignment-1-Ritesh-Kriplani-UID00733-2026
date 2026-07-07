@@ -31,7 +31,11 @@ $color-text-inverse: $white-pure;
 // 4. GRADIENTS
 
 /// @type Color
-$gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
+$gradient-primary: linear-gradient(
+    97.54deg,
+    $blue-dark 35.49%,
+    $blue-light 165.37%
+);
 
 // 5. TYPOGRAPHY
 
