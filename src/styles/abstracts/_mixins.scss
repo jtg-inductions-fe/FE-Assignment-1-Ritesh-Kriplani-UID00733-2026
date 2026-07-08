@@ -1,12 +1,7 @@
-// src/styles/abstracts/_mixins.scss
-
 @use 'variables' as *;
 
-// ==========================================================================
 // 1. MEDIA QUERIES
-// ==========================================================================
 
-// Define a map config for flexible and scalable breakpoint management
 $breakpoints: (
     'tablet': $breakpoint-tablet,
     'desktop': $breakpoint-desktop,

@@ -7,14 +7,10 @@
 
 @use '../abstracts' as *;
 
-/// 1. Set the root font size.
-/// Keeps accessibility intact by utilizing the browser's default base (usually 16px).
 html {
     font-size: 100%;
 }
 
-/// 2. Set the global body typography.
-/// Utilizes the primary font family and semantic color tokens.
 body {
     font-family: $font-primary;
     color: $color-text-main;
@@ -22,7 +18,6 @@ body {
     font-weight: $font-weight-regular;
 }
 
-/// 3. Standardize heading weights based on Figma data.
 h1 {
     font-size: 3rem;
     line-height: 1.2;
