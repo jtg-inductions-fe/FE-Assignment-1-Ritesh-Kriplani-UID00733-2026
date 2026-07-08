@@ -23,6 +23,9 @@ $color-text-muted: $grey-medium;
 $color-text-dark: $grey-dark;
 $color-text-inverse: $white-pure;
 
+// 3. GRADIENTS
+
+/// @type Color
 $gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
 
 $blue-dark: #002f52;
