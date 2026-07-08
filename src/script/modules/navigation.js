@@ -1,8 +1,3 @@
-// src/script/modules/navigation.js
-
-/**
- * Initializes the dropdown behavior for the tablet/desktop navigation.
- */
 export function initDropdown() {
     const categoriesBtn = document.querySelector(
         '.header__nav-link--categorias',
@@ -28,7 +23,6 @@ export function initDropdown() {
         }
     });
 
-    // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (
             !categoriesBtn.contains(e.target) &&
@@ -39,7 +33,6 @@ export function initDropdown() {
         }
     });
 
-    // Close on Escape key for accessibility
     document.addEventListener('keydown', (e) => {
         if (
             e.key === 'Escape' &&
@@ -47,7 +40,7 @@ export function initDropdown() {
         ) {
             categoriesBtn.setAttribute('aria-expanded', 'false');
             dropdownMenu.setAttribute('hidden', '');
-            categoriesBtn.focus(); // Return focus to the button
+            categoriesBtn.focus();
         }
     });
 }
