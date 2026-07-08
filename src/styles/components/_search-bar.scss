@@ -19,6 +19,7 @@
     @include breakpoint-up('desktop') {
         max-width: to_rem(586);
     }
+
     &:focus-within {
         outline: to_rem(2) solid $color-secondary;
         outline-offset: to_rem(2);
@@ -54,6 +55,7 @@
         width: to_rem(24);
         height: to_rem(24);
     }
+
     &__input {
         width: to_rem(214);
         padding: 0;

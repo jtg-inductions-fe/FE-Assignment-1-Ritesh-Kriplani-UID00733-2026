@@ -12,6 +12,12 @@
             href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <link rel="stylesheet" href="./src/styles/main.scss" />
     </head>
@@ -199,6 +205,135 @@
                 </form>
             </div>
         </section>
+        
+        <section class="latest-releases">
+            <h2 class="latest-releases__title">LATEST RELEASES</h2>
+
+            <div class="latest-releases__wrapper">
+                <div class="latest-releases__inner">
+                    <div class="swiper latest-releases__slider">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/apache-kafka.svg"
+                                    alt="Apache Kafka and Spring Boot"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/lideranca.png"
+                                    alt="Liderança em Design"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/javascript.svg"
+                                    alt="JavaScript Assertivo"
+                                />
+                            </div>
+                                <img
+                                    src="assets/images/arquitetura.jpg"
+                                    alt="Arquitetura de Software"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/construct-2.jpg"
+                                    alt="Construct 2"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/gestao.jpg"
+                                    alt="Gestão Ágil"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/gestao-2.jpg"
+                                    alt="Gestão de Projetos"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/metricas-ageis.jpg"
+                                    alt="Métricas Ágeis"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/nodejs.jpg"
+                                    alt="Node.js"
+                                />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/portugol.jpg"
+                                    alt="Portugol"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/react-native.jpg"
+                                    alt="React Native"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="assets/images/tuning.jpg"
+                                    alt="Tuning de Performance"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/ux.jpg" alt="UX" />
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="promo-card">
+                        <div class="promo-card__content">
+                            <div class="promo-card__info">
+                                <h3 class="promo-card__title">
+                                    You might also be interested in...
+                                </h3>
+                                <h4 class="promo-card__subtitle">
+                                    Angular 11 and Firebase
+                                </h4>
+                                <p class="promo-card__text">
+                                    Building an application integrated with the
+                                    Google platform.
+                                </p>
+                            </div>
+                            <img
+                                src="assets/logos/angular.svg"
+                                alt="Angular Logo"
+                                class="promo-card__image"
+                            />
+                        </div>
+
+                        <div class="promo-card__actions">
+                            <div class="promo-card__icons">
+                                <img
+                                    src="assets/icons/favoritos.svg"
+                                    alt="Favorite"
+                                />
+                                <img
+                                    src="assets/icons/sacola.svg"
+                                    alt="Add to Bag"
+                                />
+                            </div>
+                            <button class="button-primary">Learn more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
