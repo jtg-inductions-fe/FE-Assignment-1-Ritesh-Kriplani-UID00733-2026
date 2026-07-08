@@ -18,31 +18,15 @@
         max-width: 588px;
         padding: 24px;
         border-radius: 10px;
-        // confirmed via Figma inspector: X0 Y4 Blur4 Spread0 #000000 25%
         box-shadow: 0px 4px 4px 0px rgba($color-text-main, 0.25);
-        // vertical gap between __content and __actions rows, backed out from
-        // card height (266px) minus content/actions heights — see notes below
         gap: 18px;
     }
 
     @include respond-to('desktop') {
-        // confirmed via Figma inspector ("Card interesse Angular"), derived from
-        // child positions: image right edge (419+146=565) + 16px padding = 581
         max-width: 581px;
-        // confirmed via Figma inspector: title sits at Top:16/Left:16 relative
-        // to the card — smaller than tablet's 24px, which looks backwards, but
-        // that's what the inspector shows. Flag it if it looks wrong live.
         padding: 16px;
-        // no new inspector reading for radius/shadow at this breakpoint —
-        // kept at tablet's confirmed values
     }
 
-    // Below ~360px there isn't enough room left for the fixed 195px image
-    // plus readable text once the card itself shrinks under 380px — __info
-    // (flex:1 1 auto, min-width:0) gets squeezed down to almost nothing and
-    // words start breaking mid-letter. Stack vertically, shrink the image,
-    // drop the paragraph, and center the actions row so it doesn't look
-    // cramped against the newly-centered content above it.
     @media (max-width: 359px) {
         &__content {
             flex-direction: column;
@@ -104,14 +88,10 @@
         font-weight: 700;
         line-height: 1.4;
         margin: 3px 0 0 -8px;
-        // confirmed via Figma inspector: stays 16px / 700 at tablet — no override needed
 
         @include respond-to('desktop') {
-            // confirmed via Figma inspector: 32px, color unchanged (#EB9B00 = $color-secondary)
             font-size: 32px;
-            // confirmed Figma width for this text box specifically — wider than
-            // the subtitle/paragraph column below it, so kept separate rather
-            // than sharing a single column max-width
+
             max-width: 385px;
         }
     }
@@ -141,53 +121,42 @@
         margin: -6px 0 0 -9px;
 
         @include respond-to('tablet') {
-            // confirmed via Figma inspector: 16px / regular / #000000 at 85% opacity
             font-size: $font-size-sm; // 16px
             color: rgba($color-text-main, 0.85);
         }
-        // desktop reads identical (16px / rgba(0,0,0,.85)) — no override needed
     }
 
-    // --- media column: decorative backdrop + logo image on top of it ---
-    // ⚠️ Note: your current index.html doesn't actually render a
-    // `.promo-card__media` / `.promo-card__media-backdrop` element — the
-    // <img class="promo-card__image"> sits directly inside `.promo-card__content`.
-    // These two rules are effectively dead code as the markup stands today.
-    // Leaving them in place untouched since removing them wasn't requested,
-    // but worth deleting (or wiring into the markup) during cleanup.
     &__media {
         position: relative;
-        width: 150px; // ≈ backdrop width — confirm against Figma
+        width: 150px;
         flex-shrink: 0;
-        align-self: stretch; // backdrop height follows the info column's height
+        align-self: stretch;
     }
 
     &__media-backdrop {
         position: absolute;
-        top: -24px; // cancels the card's own padding so the shape can bleed to the edge
-        right: -24px; // bleeds flush with the card's right edge
+        top: -24px;
+        right: -24px;
         bottom: 0;
         left: 0;
-        background-color: #f0dab0; // placeholder tan — replace with the exact Figma fill hex
+        background-color: #f0dab0;
         border-radius: 4px 4px 4px 0;
         z-index: 0;
     }
 
     &__image {
         position: relative;
-        z-index: 1; // sits on top of the backdrop
+        z-index: 1;
         width: 195px;
         height: 166px;
         object-fit: contain;
-        margin: -4px -5px 0 24px; // offsets the icon toward the backdrop's top-left, per the design
+        margin: -4px -5px 0 24px;
 
         @include respond-to('tablet') {
-            // confirmed via Figma inspector ("Angular" layer): 146 × 151.41px
             width: 146px;
             height: 152px;
-            margin-top: 10px; // no offset needed once the card has real breathing room via __content gap
+            margin-top: 10px;
         }
-        // desktop reads the same 146×151.41 — no override needed
     }
 
     &__actions {
@@ -201,24 +170,10 @@
         display: flex;
         gap: 24px;
         img {
-            width: 30px; /* Adjust this number up or down to find the perfect look */
+            width: 30px;
             height: auto;
             cursor: pointer;
             margin: 16px 0 0 -2px;
         }
     }
 }
-
-// ---------------------------------------------------------------------------
-// Layout math behind the tablet numbers above (card = 588 × 266px):
-//   24 (pad-top) + 152 (image height) + 18 (gap) + 48 (button height) + 24 (pad-bottom) = 266 ✓
-//   24 (pad-l) + 370 (text col) + 24 (content gap) + 146 (image) + 24 (pad-r) = 588 ✓
-// The Button component itself (146×48, padding 8/16, #EB9B00) is defined in
-// its own partial, not included here — its measured position lined up
-// exactly with this padding/gap math, so no changes should be needed there.
-//
-// Layout math behind the desktop numbers above (card = 581px wide):
-//   16 (pad-l) + 342 (text col, Frame42) + 61 (content gap) + 146 (image) + 16 (pad-r) = 581 ✓
-//   Card height/vertical gaps aren't hard-coded — left as auto/content-driven
-//   rather than guessed, since no single confirmed card-height reading exists.
-// ---------------------------------------------------------------------------
