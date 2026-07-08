@@ -8,12 +8,6 @@ $breakpoints: (
 );
 
 /// Responsive layout mixin for Mobile-First architecture.
-/// @param {String} $size - The target breakpoint keyword ('tablet', 'desktop').
-/// @require {variable} $breakpoints
-/// @example scss
-///   .container {
-///     @include respond-to('tablet') { ... }
-///   }
 @mixin respond-to($size) {
     @if map-has-key($breakpoints, $size) {
         @media (min-width: map-get($breakpoints, $size)) {
@@ -24,12 +18,8 @@ $breakpoints: (
     }
 }
 
-// ==========================================================================
 // 2. LAYOUT UTILITIES
-// ==========================================================================
 
-/// Constrains the maximum width of a container for ultra-wide desktop monitors
-/// and centers it on the page.
 /// @require {variable} $breakpoint-desktop
 @mixin container-layout {
     max-width: $breakpoint-desktop;

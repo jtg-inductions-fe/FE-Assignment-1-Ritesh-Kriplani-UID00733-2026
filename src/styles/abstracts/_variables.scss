@@ -1,9 +1,7 @@
 $breakpoint-tablet: 64rem;
 $breakpoint-desktop: 108rem;
 
-// ==========================================================================
 // 1. BASE COLOR PALETTE
-// ==========================================================================
 
 /// @access private (Do NOT use directly in CSS rules)
 $blue-dark: #002f52;
@@ -16,9 +14,7 @@ $grey-bg-alt: #ebecee;
 $grey-medium: #858585;
 $grey-dark: #474646;
 
-// ==========================================================================
 // 2. SEMANTIC COLOR TOKENS
-// ==========================================================================
 
 /// @access public (USE THESE in your components)
 $color-primary: $blue-dark;
@@ -31,18 +27,13 @@ $color-text-muted: $grey-medium;
 $color-text-dark: $grey-dark;
 $color-text-inverse: $white-pure;
 
-// ==========================================================================
 // 3. GRADIENTS
-// ==========================================================================
 
 /// @type Color
 $gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
 
-// ==========================================================================
 // 4. TYPOGRAPHY
-// ==========================================================================
 
-/// Global font families.
 $font-primary: 'Poppins', sans-serif;
 $font-logo: 'Josefin Sans', sans-serif;
 
@@ -64,14 +55,10 @@ $font-size-4xl: 2.25rem; // 36px
 $line-height-tight: 1;
 $letter-spacing-none: 0%;
 
-// ==========================================================================
 // 5. SHADOWS
-// ==========================================================================
 
-/// Large, dispersed shadow for primary dropdown menus.
 /// @type List
 $shadow-dropdown: 0px 8px 64px 8px rgba(0, 0, 0, 0.25);
 
-/// Tighter, subtle shadow for individual book cards and smaller elements.
 /// @type List
 $shadow-card: 2px 4px 8px 0px rgba(0, 0, 0, 0.15);
