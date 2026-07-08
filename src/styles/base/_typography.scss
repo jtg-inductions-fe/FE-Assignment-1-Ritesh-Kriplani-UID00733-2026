@@ -4,8 +4,6 @@ html {
     font-size: 100%;
 }
 
-/// 2. Set the global body typography.
-/// Utilizes the primary font family and semantic color tokens.
 body {
     font-family: $font-primary;
     color: $color-text-main;
