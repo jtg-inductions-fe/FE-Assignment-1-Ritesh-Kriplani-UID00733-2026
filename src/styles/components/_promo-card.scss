@@ -14,7 +14,7 @@
 
     overflow: hidden;
 
-    @include respond-to('tablet') {
+    @include breakpoint-up('tablet') {
         max-width: 588px;
         padding: 24px;
         border-radius: 10px;
@@ -22,7 +22,7 @@
         gap: 18px;
     }
 
-    @include respond-to('desktop') {
+    @include breakpoint-up('desktop') {
         max-width: 581px;
         padding: 16px;
     }
@@ -55,14 +55,14 @@
         align-items: flex-start;
         gap: 16px;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
             gap: 24px;
         }
 
-        @include respond-to('desktop') {
+        @include breakpoint-up('desktop') {
             gap: 61px;
         }
     }
@@ -74,7 +74,7 @@
         flex: 1 1 auto;
         min-width: 0;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             gap: 16px;
         }
     }
@@ -87,7 +87,7 @@
         line-height: 1.4;
         margin: 3px 0 0 -8px;
 
-        @include respond-to('desktop') {
+        @include breakpoint-up('desktop') {
             font-size: 32px;
 
             max-width: 385px;
@@ -102,7 +102,7 @@
         line-height: 1.4;
         margin: -7px 0 0 -8px;
 
-        @include respond-to('desktop') {
+        @include breakpoint-up('desktop') {
             color: #002f52;
         }
     }
@@ -115,7 +115,7 @@
         line-height: 1.5;
         margin: -6px 0 0 -9px;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             font-size: $font-size-sm; // 16px
             color: rgba($color-text-main, 0.85);
         }
@@ -147,7 +147,7 @@
         object-fit: contain;
         margin: -4px -5px 0 24px;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             width: 146px;
             height: 152px;
             margin-top: 10px;
