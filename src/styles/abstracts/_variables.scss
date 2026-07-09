@@ -43,14 +43,14 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
-$font-size-xs: 0.875rem; // 14px
-$font-size-sm: 1rem; // 16px
-$font-size-md: 1.125rem; // 18px
-$font-size-lg: 1.5rem; // 24px
-$font-size-xl: 1.625rem; // 26px
-$font-size-xxl: 1.875rem; // 30px
-$font-size-3xl: 2rem; // 32px
-$font-size-4xl: 2.25rem; // 36px
+$font-size-xs: to_rem(14);
+$font-size-sm: to_rem(16); // 1rem
+$font-size-md: to_rem(18);
+$font-size-lg: to_rem(24);
+$font-size-xl: to_rem(26);
+$font-size-xxl: to_rem(30);
+$font-size-3xl: to_rem(32);
+$font-size-4xl: to_rem(36);
 
 $line-height-tight: 1;
 $letter-spacing-none: 0%;
