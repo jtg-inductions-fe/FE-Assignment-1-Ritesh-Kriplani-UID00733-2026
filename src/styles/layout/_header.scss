@@ -4,7 +4,7 @@
     background-color: $color-bg-main;
     position: relative;
 
-    @include respond-to('tablet') {
+    @include breakpoint-up('tablet') {
         display: flex;
         justify-content: center;
     }
@@ -17,14 +17,14 @@
         padding: 0 $space-24 0 0;
         box-sizing: border-box;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             width: $breakpoint-tablet;
             max-width: 100%;
             height: auto;
             padding: $space-18 $header-height;
         }
 
-        @include respond-to('desktop') {
+        @include breakpoint-up('desktop') {
             width: $breakpoint-desktop;
             justify-content: flex-start;
         }
@@ -39,7 +39,7 @@
     &__brand {
         gap: $space-brand-gap;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             gap: $space-brand-gap-tablet;
         }
     }
@@ -47,11 +47,11 @@
     &__actions {
         gap: $space-8;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             gap: $space-24;
         }
 
-        @include respond-to('desktop') {
+        @include breakpoint-up('desktop') {
             gap: $space-61;
             padding-left: $space-55;
             transform: translateX($space-11);
@@ -77,13 +77,14 @@
 
         &.is-active {
             background: $gradient-primary;
+
             .header__icon {
                 width: $icon-lg;
                 height: $icon-sm;
             }
         }
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             display: none;
         }
     }
@@ -91,52 +92,60 @@
     &__icon {
         display: block;
         flex-shrink: 0;
+    }
 
-        &--logo {
-            width: $icon-xxl;
-            height: $icon-xxl;
-            min-width: $icon-xxl;
-            transform: translate($space-1, -$space-1);
+    &__logo-icon {
+        display: block;
+        flex-shrink: 0;
+        width: $icon-xxl;
+        height: $icon-xxl;
+        min-width: $icon-xxl;
+        transform: translate($space-1, -$space-1);
 
-            @include respond-to('tablet') {
-                transform: translate(0, -$space-4);
-            }
+        @include breakpoint-up('tablet') {
+            transform: translate(0, -$space-4);
         }
+    }
 
-        &--favorites {
-            width: $icon-fav;
-            height: $icon-md;
-            min-width: $icon-fav;
+    &__favorites-icon {
+        display: block;
+        flex-shrink: 0;
+        width: $icon-fav;
+        height: $icon-md;
+        min-width: $icon-fav;
+    }
+
+    &__bag-icon {
+        display: block;
+        flex-shrink: 0;
+        width: $icon-xl;
+        height: $icon-xl;
+        min-width: $icon-xl;
+        transform: translateY(-$space-5);
+        margin-top: $space-5;
+
+        @include breakpoint-up('tablet') {
+            padding-right: $space-13;
+            box-sizing: content-box;
         }
+    }
 
-        &--bag {
-            width: $icon-xl;
-            height: $icon-xl;
-            min-width: $icon-xl;
-            transform: translateY(-$space-5);
-            margin-top: 6px;
+    &__user-icon {
+        display: block;
+        flex-shrink: 0;
+        width: $icon-md;
+        height: $icon-md;
+        min-width: $icon-md;
 
-            @include respond-to('tablet') {
-                padding-right: $space-13;
-                box-sizing: content-box;
-            }
-        }
-
-        &--user {
-            width: $icon-md;
-            height: $icon-md;
-            min-width: $icon-md;
-
-            @include respond-to('tablet') {
-                padding-right: 0;
-            }
+        @include breakpoint-up('tablet') {
+            padding-right: 0;
         }
     }
 
     &__wordmark {
         display: none;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             display: inline-flex;
             font-family: $font-logo;
             font-size: $font-size-xxl;
@@ -159,13 +168,13 @@
     &__nav {
         display: none;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             display: flex;
             align-items: center;
             gap: $space-20;
         }
 
-        @include respond-to('desktop') {
+        @include breakpoint-up('desktop') {
             flex-grow: 1;
             justify-content: flex-start;
             padding-left: $space-55;
@@ -173,13 +182,13 @@
     }
 
     &__nav-item {
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             position: relative;
         }
     }
 
     &__nav-link {
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             display: inline-block;
             font-family: $font-primary;
             font-weight: $font-weight-regular;
@@ -239,23 +248,23 @@
         }
 
         &--favorites {
-            @include respond-to('tablet') {
+            @include breakpoint-up('tablet') {
                 display: none;
             }
         }
 
-        @include respond-to('desktop') {
+        @include breakpoint-up('desktop') {
             gap: $space-18;
         }
 
         span {
             display: none;
 
-            @include respond-to('desktop') {
+            @include breakpoint-up('desktop') {
                 display: inline-block;
                 font-family: $font-primary;
                 font-weight: $font-weight-regular;
-                font-size: $space-20;
+                font-size: $font-size-sm;
                 color: $color-text-main;
                 line-height: $line-height-tight;
                 white-space: nowrap;
@@ -274,7 +283,8 @@
         &[hidden] {
             display: none;
         }
-        @include respond-to('tablet') {
+
+        @include breakpoint-up('tablet') {
             display: none;
         }
     }
@@ -309,7 +319,7 @@
     }
 
     &__categories-dropdown {
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             position: absolute;
             top: 100%;
             left: 0;
@@ -325,7 +335,7 @@
     }
 
     &__categories-list {
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             list-style: none;
             padding: $space-16 0;
             display: flex;
@@ -334,7 +344,7 @@
     }
 
     &__categories-link {
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             display: block;
             padding: $space-8 $space-24;
             font-family: $font-primary;

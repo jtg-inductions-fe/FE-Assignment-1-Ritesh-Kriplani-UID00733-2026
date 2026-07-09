@@ -1,7 +1,10 @@
 @use 'functions' as *;
 
+// 1. BREAKPOINTS
 $breakpoint-tablet: to_rem(1024);
 $breakpoint-desktop: to_rem(1728);
+
+// 2. BASE COLOR PALETTE
 
 $blue-dark: #002f52;
 $blue-light: #326589;
@@ -13,6 +16,8 @@ $grey-bg-alt: #ebecee;
 $grey-medium: #858585;
 $grey-dark: #474646;
 
+// 3. SEMANTIC COLOR TOKENS
+
 $color-primary: $blue-dark;
 $color-secondary: $orange-main;
 $color-bg-main: $white-pure;
@@ -23,10 +28,12 @@ $color-text-muted: $grey-medium;
 $color-text-dark: $grey-dark;
 $color-text-inverse: $white-pure;
 
-// 3. GRADIENTS
+// 4. GRADIENTS
 
 /// @type Color
 $gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
+
+// 5. TYPOGRAPHY
 
 $font-primary: 'Poppins', sans-serif;
 $font-logo: 'Josefin Sans', sans-serif;
@@ -44,12 +51,17 @@ $font-size-xl: to_rem(26);
 $font-size-xxl: to_rem(30);
 $font-size-3xl: to_rem(32);
 $font-size-4xl: to_rem(36);
+$font-size-20: to_rem(20);
 
 $line-height-tight: 1;
 $letter-spacing-none: 0;
 
+// 6. SHADOWS
+
 $shadow-dropdown: 0 8px 64px 8px rgba(0, 0, 0, 0.25);
 $shadow-card: 2px 4px 8px 0 rgba(0, 0, 0, 0.15);
+
+// 7. SEMANTIC SPACING TOKENS
 
 $space-brand-gap: to_rem(15);
 $space-brand-gap-tablet: to_rem(11);
@@ -59,11 +71,14 @@ $space-md: to_rem(55);
 $space-lg: to_rem(61);
 $space-section-x: to_rem(80);
 
+// 8. NUMERIC SPACING SCALE
+
 $space-1: to_rem(1);
 $space-2: to_rem(2);
 $space-3: to_rem(3);
 $space-4: to_rem(4);
 $space-5: to_rem(5);
+$space-6: to_rem(6);
 $space-7: to_rem(7);
 $space-8: to_rem(8);
 $space-10: to_rem(10);
@@ -78,6 +93,8 @@ $space-32: to_rem(32);
 $space-55: to_rem(55);
 $space-61: to_rem(61);
 
+// 9. ICON SIZES
+
 $icon-sm: to_rem(24);
 $icon-md: to_rem(32);
 $icon-fav: to_rem(35);
@@ -85,6 +102,8 @@ $icon-lg: to_rem(36);
 $icon-xl: to_rem(38);
 $icon-xxl: to_rem(40);
 $icon-huge: to_rem(48);
+
+// 10. COMPONENT DIMENSIONS
 
 $width-dropdown-sm: to_rem(182);
 $width-dropdown-lg: to_rem(300);
