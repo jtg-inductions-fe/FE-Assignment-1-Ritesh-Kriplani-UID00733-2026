@@ -208,7 +208,7 @@
                 outline-offset: $space-2;
             }
 
-            &--categorias[aria-expanded='true'] {
+            &__categories-trigger[aria-expanded='true'] {
                 color: $color-text-inverse;
                 background-color: $color-primary;
                 background-image: $gradient-primary;
