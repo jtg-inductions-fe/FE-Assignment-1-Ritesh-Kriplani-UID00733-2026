@@ -58,6 +58,8 @@ $font-size-4xl: to_rem(36);
 $font-size-20: to_rem(20);
 
 $line-height-tight: 1;
+$line-height-normal: 1.25;
+$line-height-relaxed: 1.5;
 $letter-spacing-none: 0;
 
 // 6. SHADOWS
@@ -113,3 +115,5 @@ $width-dropdown-sm: to_rem(182);
 $width-dropdown-lg: to_rem(300);
 
 $header-height: to_rem(80);
+/// border radius for pillshaped elements.
+$radius-pill: to_rem(24);
