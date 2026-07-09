@@ -1,0 +1,89 @@
+@use 'sass:map';
+@use 'sass:color';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.topics {
+    @include bg-gradient-primary;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-32;
+    padding: $space-24 0;
+
+    @include respond-to('tablet') {
+        gap: $space-32;
+        padding: $space-32 0;
+    }
+
+    &__title {
+        margin: 0;
+        color: $color-text-inverse;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $font-primary;
+        font-weight: $font-weight-light;
+        font-size: $font-size-sm;
+        line-height: $line-height-tight;
+        letter-spacing: 0;
+
+        @include respond-to('tablet') {
+            font-size: $font-size-md;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        gap: $space-16;
+        max-width: 27rem;
+
+        @include respond-to('tablet') {
+            gap: $space-24;
+            max-width: 38rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        background-color: $color-secondary;
+        color: $color-text-inverse;
+        border-radius: $radius-pill;
+        padding: $space-16 $space-24;
+        font-family: $font-primary;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-sm;
+        text-decoration: none;
+        transition:
+            transform 0.2s ease,
+            background-color 0.2s ease;
+
+        &:hover,
+        &:focus-visible {
+            background-color: color.adjust($color-secondary, $lightness: -10%);
+            transform: translateY(-2px);
+        }
+
+        &:focus-visible {
+            outline: $space-2 solid $color-text-inverse;
+            outline-offset: $space-2;
+        }
+
+        @include respond-to('tablet') {
+            gap: $space-24;
+            max-width: 44rem;
+        }
+    }
+}

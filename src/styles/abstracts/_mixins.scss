@@ -31,3 +31,15 @@ $breakpoints: (
     margin: 0 auto;
     width: 100%;
 }
+
+@mixin bg-gradient-primary {
+    background: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+}
+
+@mixin line-clamp($lines) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    line-clamp: $lines;
+}
