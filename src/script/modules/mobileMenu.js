@@ -3,8 +3,8 @@ export function initMobileMenu() {
     const menuIcon = menuToggle?.querySelector('.header__icon');
     const dropdown = document.getElementById('headerDropdown');
 
-    const ICON_CLOSED = '/assets/icons/menu.svg';
-    const ICON_OPEN = '/assets/icons/frame.svg';
+    const Menu = '/assets/icons/menu.svg';
+    const Frame = '/assets/icons/frame.svg';
 
     if (!menuToggle || !dropdown) return;
 
@@ -12,14 +12,14 @@ export function initMobileMenu() {
         dropdown.hidden = true;
         menuToggle.classList.remove('is-active');
         menuToggle.setAttribute('aria-expanded', 'false');
-        if (menuIcon) menuIcon.src = ICON_CLOSED;
+        if (menuIcon) menuIcon.src = Menu;
     }
 
     function openDropdown() {
         dropdown.hidden = false;
         menuToggle.classList.add('is-active');
         menuToggle.setAttribute('aria-expanded', 'true');
-        if (menuIcon) menuIcon.src = ICON_OPEN;
+        if (menuIcon) menuIcon.src = Frame;
     }
 
     menuToggle.setAttribute('aria-expanded', 'false');
