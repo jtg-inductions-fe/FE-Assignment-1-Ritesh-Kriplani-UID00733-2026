@@ -10,11 +10,11 @@
     max-width: 380px;
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
 
-    overflow: hidden; // clips the media backdrop cleanly at the card's rounded corner
+    overflow: hidden;
 
     @include respond-to('tablet') {
-        // confirmed via Figma inspector ("Card interesse Angular"): 588px, radius 10px
         max-width: 588px;
         padding: 24px;
         border-radius: 10px;
@@ -40,7 +40,7 @@
 
         &__image {
             width: 140px;
-            height: 119px; // same aspect ratio as 195×166
+            height: 119px;
         }
 
         &__actions {
@@ -56,14 +56,13 @@
         gap: 16px;
 
         @include respond-to('tablet') {
-            flex-direction: row; // Return to side-by-side row on tablet screens
+            flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
             gap: 24px;
         }
 
         @include respond-to('desktop') {
-            // derived: image Left(419) − [Frame42 Left(16) + Frame42 Width(342)] = 61
             gap: 61px;
         }
     }
@@ -73,10 +72,9 @@
         flex-direction: column;
         gap: 12px;
         flex: 1 1 auto;
-        min-width: 0; // lets the text column shrink instead of forcing __content wider than the card
+        min-width: 0;
 
         @include respond-to('tablet') {
-            // no direct inspector value — light bump for the bigger card, adjust after QA
             gap: 16px;
         }
     }
@@ -103,11 +101,8 @@
         font-weight: 700;
         line-height: 1.4;
         margin: -7px 0 0 -8px;
-        // no direct inspector reading at tablet for this layer — left unchanged
 
         @include respond-to('desktop') {
-            // confirmed via Figma inspector — check this against $color-primary
-            // and update the token if it doesn't already match
             color: #002f52;
         }
     }
