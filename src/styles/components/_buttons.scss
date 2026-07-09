@@ -7,7 +7,7 @@
         border: 1px solid $color-primary;
         background-color: $color-secondary;
         color: $color-text-inverse;
-        padding: 8px 16px;
+        padding: to-rem(8) to-rem(16);
         font-family: $font-primary;
         font-weight: $font-weight-bold;
         text-align: center;
@@ -21,7 +21,7 @@
 
         &:focus-visible {
             outline: 2px solid $color-primary;
-            outline-offset: 4px;
+            outline-offset: to_rem(4);
         }
     }
 }

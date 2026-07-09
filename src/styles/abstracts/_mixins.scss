@@ -1,5 +1,4 @@
 @use 'variables' as *;
-
 // 1. MEDIA QUERIES
 
 $breakpoints: (
@@ -7,8 +6,14 @@ $breakpoints: (
     'desktop': $breakpoint-desktop,
 );
 
-/// Responsive layout mixin for Mobile-First architecture.
-@mixin respond-to($size) {
+/// Responsive layout mixin for mobile-first architecture.
+/// @param {String} $breakpoint - Breakpoint name from the $breakpoints map
+/// @example
+///   @include breakpoint-up(tablet) {
+///     padding: 2rem;
+///   }
+
+@mixin breakpoint-up($size) {
     @if map-has-key($breakpoints, $size) {
         @media (min-width: map-get($breakpoints, $size)) {
             @content;
