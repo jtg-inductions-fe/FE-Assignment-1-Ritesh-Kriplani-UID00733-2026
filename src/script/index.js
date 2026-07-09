@@ -4,4 +4,5 @@ import { initMobileMenu } from './modules/mobileMenu.js';
 document.addEventListener('DOMContentLoaded', () => {
     initDropdown();
     initMobileMenu();
+    initLatestReleasesSlider();
 });
