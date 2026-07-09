@@ -1,11 +1,4 @@
-@forward 'variables' show $breakpoint-tablet, $breakpoint-desktop,
-    $color-primary, $color-secondary, $color-bg-main, $color-bg-alt,
-    $color-bg-muted, $color-text-main, $color-text-muted, $color-text-dark,
-    $color-text-inverse, $gradient-primary, $font-primary, $font-logo,
-    $font-weight-light, $font-weight-regular, $font-weight-medium,
-    $font-weight-bold, $font-size-xs, $font-size-sm, $font-size-md,
-    $font-size-lg, $font-size-xl, $font-size-xxl, $font-size-3xl, $font-size-4xl,
-    $line-height-tight, $letter-spacing-none, $shadow-dropdown, $shadow-card;
+@forward 'variables';
 
 @forward 'mixins';
 @forward 'functions';
