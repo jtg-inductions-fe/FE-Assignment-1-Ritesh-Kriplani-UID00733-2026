@@ -89,7 +89,6 @@
 
         @include breakpoint-up('desktop') {
             font-size: to_rem(32);
-
             max-width: to_rem(385);
         }
     }
@@ -98,7 +97,7 @@
         color: $color-primary;
         font-family: $font-primary;
         font-size: $font-size-md; // 18px
-        font-weight: 700;
+        font-weight: $font-weight-medium;
         line-height: 1.4;
         margin: -7px 0 0 -8px;
 
@@ -111,7 +110,7 @@
         color: $color-text-main;
         font-family: $font-primary;
         font-size: $font-size-xs; // 14px
-        font-weight: 400;
+        font-weight: $font-weight-medium;
         line-height: 1.5;
         margin: -6px 0 0 -9px;
 
@@ -135,7 +134,7 @@
         bottom: 0;
         left: 0;
         background-color: $color-promo-backdrop;
-        border-radius: 4px 4px 4px 0;
+        border-radius: to_rem(4) to_rem(4) to_rem(4) 0;
         z-index: 0;
     }
 
