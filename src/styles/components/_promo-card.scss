@@ -3,28 +3,28 @@
 .promo-card {
     position: relative;
     background-color: $color-bg-main;
-    border-radius: 4px;
+    border-radius: to_rem(4);
     box-shadow: $shadow-card;
-    padding: 22px;
+    padding: to_rem(22);
     width: 100%;
-    max-width: 380px;
+    max-width: to_rem(380);
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: to_rem(15);
 
     overflow: hidden;
 
     @include breakpoint-up('tablet') {
-        max-width: 588px;
-        padding: 24px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 4px 0px rgba($color-text-main, 0.25);
-        gap: 18px;
+        max-width: to_rem(588);
+        padding: to_rem(24);
+        border-radius: to_rem(10);
+        box-shadow: $shadow-card;
+        gap: to_rem(18);
     }
 
     @include breakpoint-up('desktop') {
-        max-width: 581px;
-        padding: 16px;
+        max-width: to_rem(582);
+        padding: to_rem(16);
     }
 
     @media (max-width: 359px) {
@@ -39,13 +39,13 @@
         }
 
         &__image {
-            width: 140px;
-            height: 119px;
+            width: to_rem(140);
+            height: to_rem(120);
         }
 
         &__actions {
             justify-content: center;
-            gap: 24px;
+            gap: to_rem(24);
         }
     }
 
@@ -53,29 +53,29 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 16px;
+        gap: to_rem(16);
 
         @include breakpoint-up('tablet') {
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 24px;
+            gap: to_rem(24);
         }
 
         @include breakpoint-up('desktop') {
-            gap: 61px;
+            gap: to_rem(62);
         }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: to_rem(12);
         flex: 1 1 auto;
         min-width: 0;
 
         @include breakpoint-up('tablet') {
-            gap: 16px;
+            gap: to_rem(16);
         }
     }
 
@@ -83,14 +83,14 @@
         color: $color-secondary;
         font-family: $font-primary;
         font-size: $font-size-sm;
-        font-weight: 700;
+        font-weight: $font-weight-bold;
         line-height: 1.4;
         margin: 3px 0 0 -8px;
 
         @include breakpoint-up('desktop') {
-            font-size: 32px;
+            font-size: to_rem(32);
 
-            max-width: 385px;
+            max-width: to_rem(385);
         }
     }
 
@@ -103,7 +103,7 @@
         margin: -7px 0 0 -8px;
 
         @include breakpoint-up('desktop') {
-            color: #002f52;
+            color: $color-secondary-dark;
         }
     }
 
@@ -134,7 +134,7 @@
         right: -24px;
         bottom: 0;
         left: 0;
-        background-color: #f0dab0;
+        background-color: $color-promo-backdrop;
         border-radius: 4px 4px 4px 0;
         z-index: 0;
     }
@@ -142,15 +142,15 @@
     &__image {
         position: relative;
         z-index: 1;
-        width: 195px;
-        height: 166px;
+        width: to_rem(196);
+        height: to_rem(166);
         object-fit: contain;
         margin: -4px -5px 0 24px;
 
         @include breakpoint-up('tablet') {
-            width: 146px;
-            height: 152px;
-            margin-top: 10px;
+            width: to_rem(146);
+            height: to_rem(152);
+            margin-top: to_rem(10);
         }
     }
 
@@ -158,17 +158,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 16px;
+        gap: to_rem(16);
     }
 
     &__icons {
         display: flex;
-        gap: 24px;
+        gap: to_rem(24);
         img {
-            width: 30px;
+            width: to_rem(30);
             height: auto;
             cursor: pointer;
-            margin: 16px 0 0 -2px;
+            margin: to_rem(16) 0 0 0;
         }
     }
 }

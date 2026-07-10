@@ -10,32 +10,32 @@
         font-family: $font-primary;
         font-size: $font-size-md;
         font-weight: $font-weight-bold;
-        padding: 20px 0;
+        padding: to_rem(20) 0;
         margin: 0;
         text-transform: uppercase;
 
         @include breakpoint-up('tablet') {
             font-size: $font-size-xl;
 
-            padding: 32px 0;
+            padding: to_rem(32) 0;
         }
 
         @include breakpoint-up('desktop') {
-            font-size: 32px;
+            font-size: to_rem(32);
         }
     }
 
     &__wrapper {
         background-color: $color-bg-alt;
-        padding: 12px 16px 48px;
+        padding: to_rem(12) to_rem(16) to_rem(48);
         width: 100%;
 
         @include breakpoint-up('tablet') {
-            padding: 48px 24px 64px;
+            padding: to_rem(48) to_rem(24) to_rem(64);
         }
 
         @include breakpoint-up('desktop') {
-            padding: 103px 24px;
+            padding: to_rem(104) to_rem(24);
         }
     }
 
@@ -45,32 +45,32 @@
         align-items: center;
 
         @include breakpoint-up('tablet') {
-            gap: 48px;
+            gap: to_rem(48);
         }
 
         @include breakpoint-up('desktop') {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            max-width: 1342px;
+            max-width: to_rem(1342);
             margin: 0 auto;
-            gap: 112px;
+            gap: to_rem(112);
         }
     }
 
     &__slider {
         width: 84%;
-        padding-bottom: 15px;
+        padding-bottom: to_rem(16);
 
         position: relative;
 
-        --swiper-navigation-size: 16px;
+        --swiper-navigation-size: to_rem(16);
 
         @include breakpoint-up('desktop') {
-            width: 669px;
+            width: to_rem(770);
             flex-shrink: 0;
             padding-bottom: 0;
-            --swiper-navigation-size: 20px;
+            --swiper-navigation-size: to_rem(20);
         }
 
         .swiper-slide {
@@ -79,25 +79,25 @@
             width: auto;
 
             img {
-                width: 179px;
+                width: to_rem(180);
                 height: auto;
                 box-shadow: $shadow-card;
 
                 @include breakpoint-up('tablet') {
-                    width: 192px;
+                    width: to_rem(192);
                 }
 
                 @include breakpoint-up('desktop') {
-                    width: 180px;
-                    height: 253.51px;
+                    width: to_rem(180);
+                    height: to_rem(254);
                 }
             }
         }
 
         .swiper-button-prev,
         .swiper-button-next {
-            width: 15px;
-            height: 40px;
+            width: to_rem(15);
+            height: to_rem(40);
             margin-top: -42px;
             background-color: $color-primary;
             border-radius: 50%;
@@ -109,28 +109,27 @@
             }
 
             @include breakpoint-up('desktop') {
-                width: 48px;
-                height: 48px;
-                margin-top: -24px;
+                width: to_rem(8);
+                height: to_rem(8);
             }
         }
 
         .swiper-button-prev {
-            left: 8px;
+            left: to_rem(8);
         }
 
         .swiper-button-next {
-            right: 8px;
+            right: to_rem(8);
         }
 
         .swiper-pagination {
             position: static;
-            margin-bottom: 16px;
+            margin-bottom: to_rem(16);
         }
 
         .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
+            width: to_rem(8);
+            height: to_rem(8);
             background-color: $color-primary;
             opacity: 0.5;
 
