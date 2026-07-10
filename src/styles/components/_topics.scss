@@ -12,7 +12,7 @@
     gap: $space-32;
     padding: $space-24 0;
 
-    @include respond-to('tablet') {
+    @include breakpoint-up('tablet') {
         gap: $space-32;
         padding: $space-32 0;
     }
@@ -28,7 +28,7 @@
         line-height: $line-height-tight;
         letter-spacing: 0;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             font-size: $font-size-md;
         }
     }
@@ -43,7 +43,7 @@
         gap: $space-16;
         max-width: 27rem;
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             gap: $space-24;
             max-width: 38rem;
         }
@@ -60,7 +60,7 @@
         white-space: nowrap;
         background-color: $color-secondary;
         color: $color-text-inverse;
-        border-radius: $radius-pill;
+
         padding: $space-16 $space-24;
         font-family: $font-primary;
         font-weight: $font-weight-bold;
@@ -81,7 +81,7 @@
             outline-offset: $space-2;
         }
 
-        @include respond-to('tablet') {
+        @include breakpoint-up('tablet') {
             gap: $space-24;
             max-width: 44rem;
         }
