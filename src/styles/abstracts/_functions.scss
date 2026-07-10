@@ -1,3 +1,4 @@
+@use 'sass:math';
 /// Converts pixel value to rem.
 /// @param {Number} $px - Pixel value to convert
 /// @return {Number} The value in rem
@@ -6,5 +7,5 @@
     @if type-of($px) == 'number' and not unitless($px) {
         $px: $px / 1px;
     }
-    @return ($px / 16) * 1rem;
+    @return math.div($px, 16) * 1rem;
 }
