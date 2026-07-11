@@ -1,0 +1,33 @@
+@use 'variables' as *;
+// 1. MEDIA QUERIES
+
+$breakpoints: (
+    'tablet': $breakpoint-tablet,
+    'desktop': $breakpoint-desktop,
+);
+
+/// Responsive layout mixin for mobile-first architecture.
+/// @param {String} $breakpoint - Breakpoint name from the $breakpoints map
+/// @example
+///   @include breakpoint-up(tablet) {
+///     padding: 2rem;
+///   }
+
+@mixin breakpoint-up($size) {
+    @if map-has-key($breakpoints, $size) {
+        @media (min-width: map-get($breakpoints, $size)) {
+            @content;
+        }
+    } @else {
+        @error "Unknown breakpoint: #{$size}. Available options are: #{map-keys($breakpoints)}.";
+    }
+}
+
+// 2. LAYOUT UTILITIES
+
+/// @require {variable} $breakpoint-desktop
+@mixin container-layout {
+    max-width: $breakpoint-desktop;
+    margin: 0 auto;
+    width: 100%;
+}

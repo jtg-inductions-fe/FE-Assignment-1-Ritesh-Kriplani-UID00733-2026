@@ -1,0 +1,82 @@
+// CSS RESET
+
+/// 1. Use a more-intuitive box-sizing model.
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/// 2. Remove default margin and padding globally.
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+}
+
+/// 3. Set core body defaults to optimize legibility.
+html {
+    line-height: 1.5;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/// 4. Improve media defaults to prevent overflow.
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/// 5. Remove built-in form typography styles.
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/// 6. Remove default list styling.
+ul,
+ol {
+    list-style: none;
+}
+
+/// 7. Reset button base styles for easier customization.
+button {
+    background: none;
+    border: none;
+}
+
+/// 8. Avoid text overflows on headings and paragraphs.
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,89 @@
+@use 'functions' as *;
+
+$breakpoint-tablet: to_rem(1024);
+$breakpoint-desktop: to_rem(1728);
+
+$blue-dark: #002f52;
+$blue-light: #326589;
+$orange-main: #eb9b00;
+$white-pure: #ffffff;
+$black-pure: #000000;
+$grey-light: #f9f9f9;
+$grey-bg-alt: #ebecee;
+$grey-medium: #858585;
+$grey-dark: #474646;
+
+$color-primary: $blue-dark;
+$color-secondary: $orange-main;
+$color-bg-main: $white-pure;
+$color-bg-alt: $grey-bg-alt;
+$color-bg-muted: $grey-light;
+$color-text-main: $black-pure;
+$color-text-muted: $grey-medium;
+$color-text-dark: $grey-dark;
+$color-text-inverse: $white-pure;
+
+$gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
+
+$font-primary: 'Poppins', sans-serif;
+$font-logo: 'Josefin Sans', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-xs: to_rem(14);
+$font-size-sm: to_rem(16);
+$font-size-md: to_rem(18);
+$font-size-lg: to_rem(24);
+$font-size-xl: to_rem(26);
+$font-size-xxl: to_rem(30);
+$font-size-3xl: to_rem(32);
+$font-size-4xl: to_rem(36);
+
+$line-height-tight: 1;
+$letter-spacing-none: 0;
+
+$shadow-dropdown: 0 8px 64px 8px rgba(0, 0, 0, 0.25);
+$shadow-card: 2px 4px 8px 0 rgba(0, 0, 0, 0.15);
+
+$space-brand-gap: to_rem(15);
+$space-brand-gap-tablet: to_rem(11);
+$space-xs: to_rem(8);
+$space-sm: to_rem(24);
+$space-md: to_rem(55);
+$space-lg: to_rem(61);
+$space-section-x: to_rem(80);
+
+$space-1: to_rem(1);
+$space-2: to_rem(2);
+$space-3: to_rem(3);
+$space-4: to_rem(4);
+$space-5: to_rem(5);
+$space-7: to_rem(7);
+$space-8: to_rem(8);
+$space-10: to_rem(10);
+$space-11: to_rem(11);
+$space-13: to_rem(13);
+$space-15: to_rem(15);
+$space-16: to_rem(16);
+$space-18: to_rem(18);
+$space-20: to_rem(20);
+$space-24: to_rem(24);
+$space-32: to_rem(32);
+$space-55: to_rem(55);
+$space-61: to_rem(61);
+
+$icon-sm: to_rem(24);
+$icon-md: to_rem(32);
+$icon-fav: to_rem(35);
+$icon-lg: to_rem(36);
+$icon-xl: to_rem(38);
+$icon-xxl: to_rem(40);
+$icon-huge: to_rem(48);
+
+$width-dropdown-sm: to_rem(182);
+$width-dropdown-lg: to_rem(300);
+
+$header-height: to_rem(80);
