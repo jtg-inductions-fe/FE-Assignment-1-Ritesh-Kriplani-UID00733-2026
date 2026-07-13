@@ -14,6 +14,7 @@
         />
 
         <link rel="stylesheet" href="./src/styles/main.scss" />
+        <script type="module" src="./src/script/index.js"></script>
     </head>
 
     <body>
@@ -94,7 +95,7 @@
                                     <a
                                         href="/category/design-ux"
                                         class="header__categories-link"
-                                        >Design &amp; UX</a
+                                        >Design & UX</a
                                     >
                                 </li>
                             </ul>
@@ -161,7 +162,7 @@
                         >Business</a
                     >
                     <a href="/category/design-ux" class="header__dropdown-link"
-                        >Design &amp; UX</a
+                        >Design & UX</a
                     >
                 </nav>
             </div>
@@ -354,6 +355,241 @@
             </ul>
         </section>
 
-        <script type="module" src="./src/script/index.js"></script>
+        <section class="newsletter" aria-labelledby="newsletter-title">
+            <div class="newsletter__container">
+                <div class="newsletter__content">
+                    <div class="newsletter__info">
+                        <h2 id="newsletter-title" class="newsletter__title">
+                            Stay up to date with the latest news!
+                        </h2>
+
+                        <p class="newsletter__text">
+                            E-book updates, new books, promotions, and more
+                        </p>
+                    </div>
+                    <form class="newsletter-form">
+                        <label
+                            for="newsletter-email"
+                            class="newsletter-form__label"
+                        >
+                            Email
+                        </label>
+
+                        <img
+                            src="/assets/icons/email.svg"
+                            alt=""
+                            class="newsletter-form__icon"
+                        />
+
+                        <input
+                            type="email"
+                            id="newsletter-email"
+                            class="newsletter-form__input"
+                            placeholder="Sign up with your email"
+                        />
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__brand">Alura Group</p>
+
+                <div class="footer__group">
+                    <h3 class="footer__group-title">Education</h3>
+
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/caelum.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Caelum</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/casa-do-codigo.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Casa do Codigo</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h3 class="footer__group-title">Online Education</h3>
+
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/alura.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Alura</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/alura-empresas.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Alura Para Empresas</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/alura-latam.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Alura LATAM</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/alura-start.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Alura Start</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/music-dot.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>MusicDot</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/alura-lingua.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Alura Língua</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/pm3.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>PM3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h3 class="footer__group-title">Community</h3>
+
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/hipsters-tech.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Hipsters ponto Tech</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/scuba.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Scuba Dev</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/layers.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Layers ponto Tech</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/like-a-boss.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Like a Boss</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/carreira-sem-fronteira.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Carreira sem Fronteira</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/hipsters-jobs.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>Hipsters ponto Jobs</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <img
+                                    src="/assets/icons/guj.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                <span>GUJ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
