@@ -1,0 +1,141 @@
+@use '../abstracts' as *;
+
+.latest-releases {
+    background-color: $color-bg-main;
+    width: 100%;
+
+    &__title {
+        text-align: center;
+        color: $color-secondary;
+        font-family: $font-primary;
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+        padding: to_rem(20) 0;
+        margin: 0;
+        text-transform: uppercase;
+
+        @include breakpoint-up('tablet') {
+            font-size: $font-size-xl;
+
+            padding: to_rem(32) 0;
+        }
+
+        @include breakpoint-up('desktop') {
+            font-size: to_rem(32);
+        }
+    }
+
+    &__wrapper {
+        background-color: $color-bg-alt;
+        padding: to_rem(12) to_rem(16) to_rem(48);
+        width: 100%;
+
+        @include breakpoint-up('tablet') {
+            padding: to_rem(48) to_rem(24) to_rem(64);
+        }
+
+        @include breakpoint-up('desktop') {
+            padding: to_rem(104) to_rem(24);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint-up('tablet') {
+            gap: to_rem(48);
+        }
+
+        @include breakpoint-up('desktop') {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            max-width: to_rem(1342);
+            margin: 0 auto;
+            gap: to_rem(112);
+        }
+    }
+
+    &__slider {
+        width: 84%;
+        padding-bottom: to_rem(16);
+
+        position: relative;
+
+        --swiper-navigation-size: to_rem(16);
+
+        @include breakpoint-up('desktop') {
+            width: to_rem(770);
+            flex-shrink: 0;
+            padding-bottom: 0;
+            --swiper-navigation-size: to_rem(20);
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            width: auto;
+
+            img {
+                width: to_rem(180);
+                height: auto;
+                box-shadow: $shadow-card;
+
+                @include breakpoint-up('tablet') {
+                    width: to_rem(192);
+                }
+
+                @include breakpoint-up('desktop') {
+                    width: to_rem(180);
+                    height: to_rem(254);
+                }
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: to_rem(15);
+            height: to_rem(40);
+            margin-top: -42px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            color: #ffffff;
+            box-shadow: $shadow-card;
+
+            &.swiper-button-disabled {
+                opacity: 0.35;
+            }
+
+            @include breakpoint-up('desktop') {
+                width: to_rem(8);
+                height: to_rem(8);
+            }
+        }
+
+        .swiper-button-prev {
+            left: to_rem(8);
+        }
+
+        .swiper-button-next {
+            right: to_rem(8);
+        }
+
+        .swiper-pagination {
+            position: static;
+            margin-bottom: to_rem(16);
+        }
+
+        .swiper-pagination-bullet {
+            width: to_rem(8);
+            height: to_rem(8);
+            background-color: $color-primary;
+            opacity: 0.5;
+
+            &-active {
+                opacity: 1;
+            }
+        }
+    }
+}

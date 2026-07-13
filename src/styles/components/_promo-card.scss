@@ -1,0 +1,173 @@
+@use '../abstracts' as *;
+
+.promo-card {
+    position: relative;
+    background-color: $color-bg-main;
+    border-radius: to_rem(4);
+    box-shadow: $shadow-card;
+    padding: to_rem(22);
+    width: 100%;
+    max-width: to_rem(380);
+    display: flex;
+    flex-direction: column;
+    margin-top: to_rem(15);
+
+    overflow: hidden;
+
+    @include breakpoint-up('tablet') {
+        max-width: to_rem(588);
+        padding: to_rem(24);
+        border-radius: to_rem(10);
+        box-shadow: $shadow-card;
+        gap: to_rem(18);
+    }
+
+    @include breakpoint-up('desktop') {
+        max-width: to_rem(582);
+        padding: to_rem(16);
+    }
+
+    @media (max-width: 360px) {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__text {
+            display: none;
+        }
+
+        &__image {
+            width: to_rem(140);
+            height: to_rem(120);
+        }
+
+        &__actions {
+            justify-content: center;
+            gap: to_rem(24);
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: to_rem(16);
+
+        @include breakpoint-up('tablet') {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: to_rem(24);
+        }
+
+        @include breakpoint-up('desktop') {
+            gap: to_rem(62);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: to_rem(12);
+        flex: 1 1 auto;
+        min-width: 0;
+
+        @include breakpoint-up('tablet') {
+            gap: to_rem(16);
+        }
+    }
+
+    &__title {
+        color: $color-secondary;
+        font-family: $font-primary;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        line-height: 1.4;
+        margin: 3px 0 0 -8px;
+
+        @include breakpoint-up('desktop') {
+            font-size: to_rem(32);
+            max-width: to_rem(385);
+        }
+    }
+
+    &__subtitle {
+        color: $color-primary;
+        font-family: $font-primary;
+        font-size: $font-size-md; // 18px
+        font-weight: $font-weight-medium;
+        line-height: 1.4;
+        margin: -7px 0 0 -8px;
+
+        @include breakpoint-up('desktop') {
+            color: $color-secondary-dark;
+        }
+    }
+
+    &__text {
+        color: $color-text-main;
+        font-family: $font-primary;
+        font-size: $font-size-xs; // 14px
+        font-weight: $font-weight-medium;
+        line-height: 1.5;
+        margin: -6px 0 0 -9px;
+
+        @include breakpoint-up('tablet') {
+            font-size: $font-size-sm; // 16px
+            color: rgba($color-text-main, 0.85);
+        }
+    }
+
+    &__media {
+        position: relative;
+        width: 150px;
+        flex-shrink: 0;
+        align-self: stretch;
+    }
+
+    &__media-backdrop {
+        position: absolute;
+        top: -24px;
+        right: -24px;
+        bottom: 0;
+        left: 0;
+        background-color: $color-promo-backdrop;
+        border-radius: to_rem(4) to_rem(4) to_rem(4) 0;
+        z-index: 0;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 1;
+        width: to_rem(196);
+        height: to_rem(166);
+        object-fit: contain;
+        margin: -4px -5px 0 24px;
+
+        @include breakpoint-up('tablet') {
+            width: to_rem(146);
+            height: to_rem(152);
+            margin-top: to_rem(10);
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: to_rem(16);
+    }
+
+    &__icons {
+        display: flex;
+        gap: to_rem(24);
+        img {
+            width: to_rem(30);
+            height: auto;
+            cursor: pointer;
+            margin: to_rem(16) 0 0 0;
+        }
+    }
+}

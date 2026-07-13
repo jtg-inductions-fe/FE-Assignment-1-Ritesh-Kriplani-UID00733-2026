@@ -1,5 +1,7 @@
 // CSS RESET
 
+@use '../abstracts/variables' as *;
+
 /// 1. Use a more-intuitive box-sizing model.
 *,
 *::before,
@@ -33,11 +35,17 @@ ol {
 /// 3. Set core body defaults to optimize legibility.
 html {
     line-height: 1.5;
+    background-color: $color-bg-alt;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    max-width: to_rem(1728);
+    margin: 0 auto;
+    background-color: $color-bg-main;
+    min-height: 100vh;
+    box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.05);
 }
 
 /// 4. Improve media defaults to prevent overflow.
