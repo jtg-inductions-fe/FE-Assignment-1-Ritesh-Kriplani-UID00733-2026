@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $gradient-primary;
+    width: 100%;
+
+    @include breakpoint-up('tablet') {
+        height: to_rem(330);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        padding: to_rem(32) to_rem(24);
+
+        @include breakpoint-up('tablet') {
+            padding: 0 to_rem(24);
+        }
+    }
+
+    &__title {
+        width: 100%;
+        max-width: to_rem(380);
+        margin: to_rem(2) 0 to_rem(8) -1px;
+        font-family: $font-primary;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-md;
+        line-height: $line-height-tight;
+        color: $color-text-inverse;
+
+        @include breakpoint-up('tablet') {
+            max-width: 100%;
+            margin: 0 0 to_rem(14);
+            font-size: to_rem(36);
+            line-height: 1;
+        }
+    }
+
+    &__subtitle {
+        width: 100%;
+        max-width: to_rem(316);
+        margin: 0 0 to_rem(24);
+        font-family: $font-primary;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-sm;
+        line-height: $line-height-tight;
+        color: $color-text-inverse;
+
+        @include breakpoint-up('tablet') {
+            max-width: 100%;
+            margin: to_rem(4) 0 to_rem(30);
+            font-size: to_rem(16);
+            line-height: 1;
+        }
+    }
+}

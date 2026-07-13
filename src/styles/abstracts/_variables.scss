@@ -31,32 +31,13 @@ $color-text-inverse: $white-pure;
 // 4. GRADIENTS
 
 /// @type Color
-$gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
+$gradient-primary: linear-gradient(
+    97.54deg,
+    $blue-dark 35.49%,
+    $blue-light 165.37%
+);
 
-$blue-dark: #002f52;
-$blue-light: #326589;
-$orange-main: #eb9b00;
-$white-pure: #ffffff;
-$black-pure: #000000;
-$grey-light: #f9f9f9;
-$grey-bg-alt: #ebecee;
-$grey-medium: #858585;
-$grey-dark: #474646;
-
-
-$color-primary: $blue-dark;
-$color-secondary: $orange-main;
-$color-bg-main: $white-pure;
-$color-bg-alt: $grey-bg-alt; 
-$color-bg-muted: $grey-light;
-$color-text-main: $black-pure;
-$color-text-muted: $grey-medium;
-$color-text-dark: $grey-dark;
-$color-text-inverse: $white-pure;
-
-
-$gradient-primary: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
-
+// 5. TYPOGRAPHY
 
 $font-primary: 'Poppins', sans-serif;
 $font-logo: 'Josefin Sans', sans-serif;
@@ -77,6 +58,8 @@ $font-size-4xl: to_rem(36);
 $font-size-20: to_rem(20);
 
 $line-height-tight: 1;
+$line-height-normal: 1.25;
+$line-height-relaxed: 1.5;
 $letter-spacing-none: 0;
 
 // 6. SHADOWS
@@ -132,3 +115,5 @@ $width-dropdown-sm: to_rem(182);
 $width-dropdown-lg: to_rem(300);
 
 $header-height: to_rem(80);
+/// border radius for pillshaped elements.
+$radius-pill: to_rem(24);
