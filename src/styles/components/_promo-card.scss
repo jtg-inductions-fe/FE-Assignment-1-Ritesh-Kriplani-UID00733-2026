@@ -84,7 +84,7 @@
         font-size: $font-size-sm;
         font-weight: $font-weight-bold;
         line-height: 1.4;
-        margin: to_rem(3) 0 0 to_rem(-8);
+        margin: to_rem(3) 0 0 to_rem(0);
         @include line-clamp(3);
 
         @include breakpoint-up('desktop') {
@@ -101,7 +101,7 @@
         font-size: $font-size-md;
         font-weight: $font-weight-bold;
         line-height: 1.4;
-        margin: to_rem(0) to_rem(0) 0 to_rem(-7px);
+        margin: to_rem(0) to_rem(0) 0 to_rem(0px);
         @include line-clamp(3);
 
         @include breakpoint-up('desktop') {
@@ -116,7 +116,7 @@
         font-size: $font-size-xs;
         font-weight: $font-weight-regular;
         line-height: 1.5;
-        margin: to_rem(-6) 0 0 to_rem(-9);
+        margin: to_rem(0) 0 0 to_rem(0);
 
         @include breakpoint-up('tablet') {
             font-size: $font-size-sm;

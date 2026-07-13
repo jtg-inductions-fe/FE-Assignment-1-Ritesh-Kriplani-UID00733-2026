@@ -237,7 +237,6 @@
         position: relative;
         text-decoration: none;
         color: $color-text-main;
-
         &:focus-visible {
             outline: $space-2 solid $color-primary;
             outline-offset: $space-2;
@@ -257,19 +256,17 @@
             gap: $space-18;
         }
 
-        .header__action-link {
-            span {
-                display: none;
+        span {
+            display: none;
 
-                @include breakpoint-up('desktop') {
-                    display: inline-block;
-                    font-family: $font-primary;
-                    font-weight: $font-weight-regular;
-                    font-size: $font-size-sm;
-                    color: $color-text-main;
-                    line-height: $line-height-tight;
-                    white-space: nowrap;
-                }
+            @include breakpoint-up('desktop') {
+                display: inline-block;
+                font-family: $font-primary;
+                font-weight: $font-weight-regular;
+                font-size: $font-size-sm;
+                color: $color-text-main;
+                line-height: $line-height-tight;
+                white-space: nowrap;
             }
         }
     }
