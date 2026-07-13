@@ -156,7 +156,7 @@
         width: to_rem(196);
         height: to_rem(166);
         object-fit: contain;
-        margin: to_rem(-4) to_rem(-5) 0 to_rem(24);
+        margin: 0 0 0 to_rem(24);
 
         @include breakpoint-up('tablet') {
             width: to_rem(146);
