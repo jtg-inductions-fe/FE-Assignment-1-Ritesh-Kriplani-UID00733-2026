@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// initilizes the latest release slider with navigation , pagination and breakpoint
 export function initLatestReleasesSlider() {
     const sliderEl = document.querySelector('.latest-releases__slider');
 

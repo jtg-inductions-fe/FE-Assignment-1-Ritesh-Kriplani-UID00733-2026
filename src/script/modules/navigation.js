@@ -1,3 +1,5 @@
+/* This initializes the categories dropdown , handles toggle ,outside click */
+
 export function initDropdown() {
     const categoriesBtn = document.querySelector('.header__categories-trigger');
     const dropdownMenu = document.getElementById('categories-dropdown');
