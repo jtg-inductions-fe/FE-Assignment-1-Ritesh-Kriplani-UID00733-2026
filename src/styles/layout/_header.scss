@@ -1,1 +1,366 @@
 @use '../abstracts' as *;
+
+.header {
+    background-color: $color-bg-main;
+    position: relative;
+
+    @include breakpoint-up('tablet') {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $header-height;
+        padding: 0 $space-24 0 0;
+        box-sizing: border-box;
+
+        @include breakpoint-up('tablet') {
+            width: $breakpoint-tablet;
+            max-width: 100%;
+            height: auto;
+            padding: $space-18 $header-height;
+        }
+
+        @include breakpoint-up('desktop') {
+            width: $breakpoint-desktop;
+            justify-content: flex-start;
+        }
+    }
+
+    &__brand,
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__brand {
+        gap: $space-brand-gap;
+
+        @include breakpoint-up('tablet') {
+            gap: $space-brand-gap-tablet;
+        }
+    }
+
+    &__actions {
+        gap: $space-8;
+
+        @include breakpoint-up('tablet') {
+            gap: $space-24;
+        }
+
+        @include breakpoint-up('desktop') {
+            gap: $space-61;
+            padding-left: $space-55;
+            transform: translateX($space-11);
+        }
+    }
+
+    &__menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        width: $header-height;
+        height: $header-height;
+
+        .header__icon {
+            width: $icon-huge;
+            height: $icon-huge;
+            transform: translateX($space-15);
+        }
+
+        &.is-active {
+            background: $gradient-primary;
+
+            .header__icon {
+                width: $icon-lg;
+                height: $icon-sm;
+            }
+        }
+
+        @include breakpoint-up('tablet') {
+            display: none;
+        }
+    }
+
+    &__icon {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    &__logo-icon {
+        display: block;
+        flex-shrink: 0;
+        width: $icon-xxl;
+        height: $icon-xxl;
+        min-width: $icon-xxl;
+        transform: translate($space-1, -$space-1);
+
+        @include breakpoint-up('tablet') {
+            transform: translate(0, -$space-4);
+        }
+    }
+
+    &__favorites-icon {
+        display: block;
+        flex-shrink: 0;
+        width: $icon-fav;
+        height: $icon-md;
+        min-width: $icon-fav;
+    }
+
+    &__bag-icon {
+        display: block;
+        flex-shrink: 0;
+        width: $icon-xl;
+        height: $icon-xl;
+        min-width: $icon-xl;
+        transform: translateY(-$space-5);
+        margin-top: $space-5;
+
+        @include breakpoint-up('tablet') {
+            padding-right: $space-13;
+            box-sizing: content-box;
+        }
+    }
+
+    &__user-icon {
+        display: block;
+        flex-shrink: 0;
+        width: $icon-md;
+        height: $icon-md;
+        min-width: $icon-md;
+
+        @include breakpoint-up('tablet') {
+            padding-right: 0;
+        }
+    }
+
+    &__wordmark {
+        display: none;
+
+        @include breakpoint-up('tablet') {
+            display: inline-flex;
+            font-family: $font-logo;
+            font-size: $font-size-xxl;
+            line-height: $line-height-tight;
+            color: $color-text-main;
+            align-items: center;
+
+            &-alura {
+                font-weight: $font-weight-bold;
+                padding-top: $space-7;
+            }
+
+            &-books {
+                font-weight: $font-weight-regular;
+                padding-top: $space-7;
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @include breakpoint-up('tablet') {
+            display: flex;
+            align-items: center;
+            gap: $space-20;
+        }
+
+        @include breakpoint-up('desktop') {
+            flex-grow: 1;
+            justify-content: flex-start;
+            padding-left: $space-55;
+        }
+    }
+
+    &__nav-item {
+        @include breakpoint-up('tablet') {
+            position: relative;
+        }
+    }
+
+    &__nav-link {
+        @include breakpoint-up('tablet') {
+            display: inline-block;
+            font-family: $font-primary;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-sm;
+            line-height: $line-height-tight;
+            color: $color-text-main;
+            text-decoration: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: $space-10;
+            white-space: nowrap;
+            text-transform: uppercase;
+
+            &:focus-visible {
+                outline: $space-2 solid $color-primary;
+                outline-offset: $space-2;
+            }
+
+            &__categories-trigger[aria-expanded='true'] {
+                color: $color-text-inverse;
+                background-color: $color-primary;
+                background-image: $gradient-primary;
+            }
+        }
+    }
+
+    &__logo-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $space-11;
+        text-decoration: none;
+
+        &:focus-visible {
+            outline: $space-2 solid $color-primary;
+            outline-offset: $space-2;
+        }
+    }
+
+    &__action-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $space-8;
+        position: relative;
+        text-decoration: none;
+        color: $color-text-main;
+
+        &:focus-visible {
+            outline: $space-2 solid $color-primary;
+            outline-offset: $space-2;
+        }
+
+        &--bag {
+            padding: $space-3 $space-8;
+        }
+
+        &--favorites {
+            @include breakpoint-up('tablet') {
+                display: none;
+            }
+        }
+
+        @include breakpoint-up('desktop') {
+            gap: $space-18;
+        }
+
+        span {
+            display: none;
+
+            @include breakpoint-up('desktop') {
+                display: inline-block;
+                font-family: $font-primary;
+                font-weight: $font-weight-regular;
+                font-size: $font-size-sm;
+                color: $color-text-main;
+                line-height: $line-height-tight;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        width: $width-dropdown-lg;
+        background-color: $color-bg-main;
+        box-shadow: $shadow-dropdown;
+
+        &[hidden] {
+            display: none;
+        }
+
+        @include breakpoint-up('tablet') {
+            display: none;
+        }
+    }
+
+    &__dropdown-title {
+        padding: $space-24 $space-24 $space-8 $space-24;
+        font-family: $font-primary;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-sm;
+        color: $color-secondary;
+    }
+
+    &__dropdown-nav {
+        display: flex;
+        flex-direction: column;
+        gap: $space-32;
+        padding: $space-24 $space-24 $space-8 $space-24;
+    }
+
+    &__dropdown-link {
+        font-family: $font-primary;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-sm;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color-primary;
+
+        &:focus-visible {
+            outline: $space-2 solid $color-primary;
+            outline-offset: $space-2;
+        }
+    }
+
+    &__categories-dropdown {
+        @include breakpoint-up('tablet') {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: $width-dropdown-sm;
+            background-color: $color-bg-main;
+            box-shadow: 0 $space-4 $space-4 rgba(0, 0, 0, 0.25);
+            z-index: 10;
+
+            &[hidden] {
+                display: none;
+            }
+        }
+    }
+
+    &__categories-list {
+        @include breakpoint-up('tablet') {
+            list-style: none;
+            padding: $space-16 0;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__categories-link {
+        @include breakpoint-up('tablet') {
+            display: block;
+            padding: $space-8 $space-24;
+            font-family: $font-primary;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-sm;
+            line-height: $line-height-tight;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color-primary;
+
+            &:hover,
+            &:focus-visible {
+                background: $gradient-primary;
+                color: $color-text-inverse;
+                outline: none;
+            }
+        }
+    }
+}
