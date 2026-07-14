@@ -41,11 +41,11 @@
         margin: 0 auto;
         padding: 0;
         gap: $space-16;
-        max-width: 27rem;
+        max-width: to_rem(27);
 
         @include breakpoint-up('tablet') {
             gap: $space-24;
-            max-width: 38rem;
+            max-width: to_rem(38);
         }
     }
 
@@ -83,7 +83,7 @@
 
         @include breakpoint-up('tablet') {
             gap: $space-24;
-            max-width: 44rem;
+            max-width: to_rem(44);
         }
     }
 }

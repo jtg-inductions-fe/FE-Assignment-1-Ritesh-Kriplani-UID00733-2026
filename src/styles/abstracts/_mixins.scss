@@ -32,9 +32,14 @@ $breakpoints: (
     width: 100%;
 }
 
-@mixin bg-gradient-primary {
-    background: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
-}
+$blue-dark: #002f52;
+$blue-light: #326589;
+
+$gradient-primary: linear-gradient(
+    97.54deg,
+    $blue-dark 35.49%,
+    $blue-light 165.37%
+);
 
 @mixin line-clamp($lines) {
     overflow: hidden;
