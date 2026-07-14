@@ -116,3 +116,5 @@ $header-height: to_rem(80);
 /// border radius for pillshaped elements.
 $radius-pill: to_rem(24);
 $max-point: 2400px;
+
+$border-primary: to_rem(1) solid $color-secondary;

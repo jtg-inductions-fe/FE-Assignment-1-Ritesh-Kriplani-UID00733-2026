@@ -4,7 +4,7 @@
 // BEM Modifier: .btn--primary
 .btn {
     &--primary {
-        border: 1px solid $color-secondary;
+        border: $border-primary;
         background-color: $color-secondary;
         color: $color-text-inverse;
         padding: to-rem(8) to-rem(32);

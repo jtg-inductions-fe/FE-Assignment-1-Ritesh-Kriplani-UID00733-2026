@@ -5,14 +5,14 @@
 
     &__container {
         font-weight: $font-weight-regular;
-        padding: to_rem(17) 0 to_rem(24) to_rem(24);
+        padding: $space-16 0 $space-24 $space-24;
         font-size: to_rem(16);
 
         @include breakpoint-up('tablet') {
             display: flex;
             justify-content: center;
-            gap: to_rem(62);
-            padding-top: to_rem(56);
+            display: flex;
+            justify-content: space-between;
         }
 
         @include breakpoint-up('desktop') {
@@ -24,7 +24,7 @@
 
     &__brand {
         font-weight: $font-weight-regular;
-        font-size: to_rem(16);
+        font-size: $font-size-xs;
 
         @include breakpoint-up('tablet') {
             font-size: to_rem(24);

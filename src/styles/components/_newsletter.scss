@@ -59,7 +59,6 @@
         width: $space-1;
         height: $space-1;
         padding: 0;
-        margin: -$space-1;
         overflow: hidden;
         clip: insert(50%);
         white-space: nowrap;
@@ -79,7 +78,7 @@
         width: 100%;
         height: to_rem(44);
         padding: 0 $space-24 0 to_rem(64);
-        border: $space-1 solid $color-primary;
+        border: $border-primary;
         border-radius: $radius-pill;
         background-color: transparent;
         box-sizing: border-box;
