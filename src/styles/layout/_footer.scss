@@ -14,12 +14,6 @@
             display: flex;
             justify-content: space-between;
         }
-
-        @include breakpoint-up('desktop') {
-            gap: to_rem(188);
-            padding-top: to_rem(56);
-            padding-bottom: to_rem(56);
-        }
     }
 
     &__brand {
@@ -61,7 +55,6 @@
         display: flex;
         align-items: center;
         gap: to_rem(7);
-        font-size: to_rem(14);
         color: $color-text-dark;
         text-decoration: none;
     }
