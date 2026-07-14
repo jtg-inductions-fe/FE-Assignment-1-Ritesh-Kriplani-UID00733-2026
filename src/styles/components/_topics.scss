@@ -4,7 +4,7 @@
 @use '../abstracts/mixins' as *;
 
 .topics {
-    @include bg-gradient-primary;
+    background: $gradient-primary;
 
     display: flex;
     flex-direction: column;
