@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as *;
+
+body {
+    max-width: $max-point;
+    margin: 0 auto;
+    background-color: #fefefe;
+    box-shadow: $shadow-dropdown;
+}

@@ -10,13 +10,13 @@
         font-family: $font-primary;
         font-size: $font-size-md;
         font-weight: $font-weight-bold;
-        margin-top: to_rem(23);
+        margin-top: to_rem(24);
         text-transform: uppercase;
+        padding-bottom: to_rem(14px);
 
         @include breakpoint-up('tablet') {
             font-size: $font-size-xl;
-
-            padding: to_rem(32) 0;
+            padding: to_rem(10) 0 to_rem(20px) 0;
         }
 
         @include breakpoint-up('desktop') {
@@ -92,24 +92,25 @@
                 }
             }
         }
-
         .swiper-button-prev,
         .swiper-button-next {
-            width: to_rem(15);
-            height: to_rem(40);
-            margin-top: -42px;
+            width: to_rem(32);
+            height: to_rem(32);
+            margin-top: 0;
+            padding: to_rem(10px);
+            transform: translateY(-50%);
             background-color: $color-primary;
             border-radius: 50%;
-            color: #ffffff;
+            color: $color-text-inverse;
             box-shadow: $shadow-card;
+
+            &::after {
+                font-size: to_rem(14);
+                font-weight: $font-weight-bold;
+            }
 
             &.swiper-button-disabled {
                 opacity: 0.35;
-            }
-
-            @include breakpoint-up('desktop') {
-                width: to_rem(8);
-                height: to_rem(8);
             }
         }
 

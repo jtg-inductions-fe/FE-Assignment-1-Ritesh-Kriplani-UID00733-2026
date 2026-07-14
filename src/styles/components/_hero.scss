@@ -23,12 +23,16 @@
         @include breakpoint-up('tablet') {
             padding: 0 to_rem(24);
         }
+        @include breakpoint-up('desktop') {
+            max-width: $breakpoint-desktop;
+            margin: 0 auto;
+        }
     }
 
     &__title {
         width: 100%;
         max-width: to_rem(380);
-        margin: to_rem(2) 0 to_rem(8) -1px;
+        margin: to_rem(2) 0 to_rem(8) 0;
         font-family: $font-primary;
         font-weight: $font-weight-bold;
         font-size: $font-size-md;

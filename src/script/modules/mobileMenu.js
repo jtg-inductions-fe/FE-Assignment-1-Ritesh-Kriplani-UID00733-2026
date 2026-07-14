@@ -1,3 +1,5 @@
+/* This initializes the mobile menu and handles toggle , outside click and escape instruction */
+
 export function initMobileMenu() {
     const menuToggle = document.querySelector('.header__menu-toggle');
     const menuIcon = menuToggle?.querySelector('.header__icon');

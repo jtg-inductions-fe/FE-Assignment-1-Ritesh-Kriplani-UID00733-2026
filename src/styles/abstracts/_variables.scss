@@ -84,21 +84,18 @@ $space-1: to_rem(1);
 $space-2: to_rem(2);
 $space-3: to_rem(3);
 $space-4: to_rem(4);
-$space-5: to_rem(5);
 $space-6: to_rem(6);
-$space-7: to_rem(7);
 $space-8: to_rem(8);
 $space-10: to_rem(10);
-$space-11: to_rem(11);
-$space-13: to_rem(13);
-$space-15: to_rem(15);
+$space-12: to_rem(12);
 $space-16: to_rem(16);
 $space-18: to_rem(18);
 $space-20: to_rem(20);
 $space-24: to_rem(24);
 $space-32: to_rem(32);
-$space-55: to_rem(55);
-$space-61: to_rem(61);
+$space-48: to_rem(48);
+$space-56: to_rem(56);
+$space-60: to_rem(60);
 
 // 9. ICON SIZES
 
@@ -118,3 +115,6 @@ $width-dropdown-lg: to_rem(300);
 $header-height: to_rem(80);
 /// border radius for pillshaped elements.
 $radius-pill: to_rem(24);
+$max-point: 2400px;
+
+$border-primary: to_rem(1) solid $color-secondary;

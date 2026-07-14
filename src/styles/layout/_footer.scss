@@ -1,1 +1,61 @@
 @use '../abstracts' as *;
+
+.footer {
+    border-top: 1px solid $color-text-main;
+
+    &__container {
+        font-weight: $font-weight-regular;
+        padding: $space-16 0 $space-24 $space-24;
+        font-size: to_rem(16);
+
+        @include breakpoint-up('tablet') {
+            display: flex;
+            justify-content: center;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__brand {
+        font-weight: $font-weight-regular;
+        font-size: $font-size-xs;
+
+        @include breakpoint-up('tablet') {
+            font-size: to_rem(24);
+        }
+    }
+
+    &__group {
+        display: none;
+
+        @include breakpoint-up('tablet') {
+            display: block;
+        }
+
+        @include breakpoint-up('desktop') {
+            width: to_rem(209);
+            border-left: 1px solid $color-text-muted;
+            padding-left: to_rem(16);
+        }
+    }
+
+    &__group-title {
+        font-size: $font-size-xs;
+        color: $color-text-muted;
+        margin-bottom: to_rem(12);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: to_rem(16);
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: to_rem(7);
+        color: $color-text-dark;
+        text-decoration: none;
+    }
+}
