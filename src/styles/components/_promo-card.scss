@@ -54,6 +54,8 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: to_rem(16);
+        position: relative;
+        top: -7px;
 
         @include breakpoint-up('tablet') {
             flex-direction: row;
@@ -86,6 +88,7 @@
         font-weight: $font-weight-bold;
         line-height: 1.4;
         margin: 3px 0 0 -8px;
+        @include line-clamp(3);
 
         @include breakpoint-up('desktop') {
             font-size: to_rem(32);
@@ -97,9 +100,10 @@
         color: $color-primary;
         font-family: $font-primary;
         font-size: $font-size-md; // 18px
-        font-weight: $font-weight-medium;
+        font-weight: $font-weight-bold;
         line-height: 1.4;
         margin: -7px 0 0 -8px;
+        @include line-clamp(3);
 
         @include breakpoint-up('desktop') {
             color: $color-secondary-dark;
@@ -110,7 +114,7 @@
         color: $color-text-main;
         font-family: $font-primary;
         font-size: $font-size-xs; // 14px
-        font-weight: $font-weight-medium;
+        font-weight: $font-weight-regular;
         line-height: 1.5;
         margin: -6px 0 0 -9px;
 

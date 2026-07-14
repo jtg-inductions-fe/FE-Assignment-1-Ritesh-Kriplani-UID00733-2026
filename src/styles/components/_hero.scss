@@ -35,6 +35,8 @@
         line-height: $line-height-tight;
         color: $color-text-inverse;
 
+        @include line-clamp(3);
+
         @include breakpoint-up('tablet') {
             max-width: 100%;
             margin: 0 0 to_rem(14);
@@ -46,18 +48,20 @@
     &__subtitle {
         width: 100%;
         max-width: to_rem(316);
-        margin: 0 0 to_rem(24);
+        margin: to_rem(13) 0 to_rem(24);
         font-family: $font-primary;
         font-weight: $font-weight-medium;
         font-size: $font-size-sm;
-        line-height: $line-height-tight;
+        line-height: $line-height-normal;
         color: $color-text-inverse;
+
+        @include line-clamp(3);
 
         @include breakpoint-up('tablet') {
             max-width: 100%;
             margin: to_rem(4) 0 to_rem(30);
             font-size: to_rem(16);
-            line-height: 1;
+            line-height: $line-height-relaxed;
         }
     }
 }
